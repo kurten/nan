@@ -1,0 +1,583 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>Errors · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.0.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="buffers.html" />
+    
+    
+    <link rel="prev" href="script.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="methods.html">
+            
+                <a href="methods.html">
+            
+                    
+                    JavaScript-accessible methods
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="scopes.html">
+            
+                <a href="scopes.html">
+            
+                    
+                    Scopes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="persistent.html">
+            
+                <a href="persistent.html">
+            
+                    
+                    Persistent references
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="new.html">
+            
+                <a href="new.html">
+            
+                    
+                    New
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="converters.html">
+            
+                <a href="converters.html">
+            
+                    
+                    Converters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="maybe_types.html">
+            
+                <a href="maybe_types.html">
+            
+                    
+                    Maybe Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="script.html">
+            
+                <a href="script.html">
+            
+                    
+                    Script
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.9" data-path="errors.html">
+            
+                <a href="errors.html">
+            
+                    
+                    Errors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="buffers.html">
+            
+                <a href="buffers.html">
+            
+                    
+                    Buffers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="callback.html">
+            
+                <a href="callback.html">
+            
+                    
+                    Nan::Callback
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="asyncworker.html">
+            
+                <a href="asyncworker.html">
+            
+                    
+                    Asynchronous work helpers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="string_bytes.html">
+            
+                <a href="string_bytes.html">
+            
+                    
+                    Strings & Bytes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="object_wrappers.html">
+            
+                <a href="object_wrappers.html">
+            
+                    
+                    Object Wrappers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="v8_internals.html">
+            
+                <a href="v8_internals.html">
+            
+                    
+                    V8 internals
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="v8_misc.html">
+            
+                <a href="v8_misc.html">
+            
+                    
+                    Miscellaneous V8 Helpers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="node_misc.html">
+            
+                <a href="node_misc.html">
+            
+                    
+                    Miscellaneous Node Helpers
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Errors</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="errors">Errors</h2>
+<p>NAN includes helpers for creating, throwing and catching Errors as much of this functionality varies across the supported versions of V8 and must be abstracted.</p>
+<p>Note that an Error object is simply a specialized form of <code>v8::Value</code>.</p>
+<p>Also consult the V8 Embedders Guide section on <a href="https://developers.google.com/v8/embed#exceptions" _target="blank">Exceptions</a> for more information.</p>
+<ul>
+<li><a href="#api_nan_error"><b><code>Nan::Error()</code></b></a></li>
+<li><a href="#api_nan_range_error"><b><code>Nan::RangeError()</code></b></a></li>
+<li><a href="#api_nan_reference_error"><b><code>Nan::ReferenceError()</code></b></a></li>
+<li><a href="#api_nan_syntax_error"><b><code>Nan::SyntaxError()</code></b></a></li>
+<li><a href="#api_nan_type_error"><b><code>Nan::TypeError()</code></b></a></li>
+<li><a href="#api_nan_throw_error"><b><code>Nan::ThrowError()</code></b></a></li>
+<li><a href="#api_nan_throw_range_error"><b><code>Nan::ThrowRangeError()</code></b></a></li>
+<li><a href="#api_nan_throw_reference_error"><b><code>Nan::ThrowReferenceError()</code></b></a></li>
+<li><a href="#api_nan_throw_syntax_error"><b><code>Nan::ThrowSyntaxError()</code></b></a></li>
+<li><a href="#api_nan_throw_type_error"><b><code>Nan::ThrowTypeError()</code></b></a></li>
+<li><a href="#api_nan_fatal_exception"><b><code>Nan::FatalException()</code></b></a></li>
+<li><a href="#api_nan_errno_exception"><b><code>Nan::ErrnoException()</code></b></a></li>
+<li><a href="#api_nan_try_catch"><b><code>Nan::TryCatch</code></b></a></li>
+</ul>
+<p><a name="api_nan_error"></a></p>
+<h3 id="nanerror">Nan::Error()</h3>
+<p>Create a new Error object using the <a href="https://v8docs.nodesource.com/io.js-3.0/da/d6a/classv8_1_1_exception.html" _target="blank">v8::Exception</a> class in a way that is compatible across the supported versions of V8.</p>
+<p>Note that an Error object is simply a specialized form of <code>v8::Value</code>.</p>
+<p>Signature:</p>
+<pre><code class="lang-c++">v8::Local&lt;v8::Value&gt; Nan::Error(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *msg);
+v8::Local&lt;v8::Value&gt; Nan::Error(v8::Local&lt;v8::String&gt; msg);
+</code></pre>
+<p><a name="api_nan_range_error"></a></p>
+<h3 id="nanrangeerror">Nan::RangeError()</h3>
+<p>Create a new RangeError object using the <a href="https://v8docs.nodesource.com/io.js-3.0/da/d6a/classv8_1_1_exception.html" _target="blank">v8::Exception</a> class in a way that is compatible across the supported versions of V8.</p>
+<p>Note that an RangeError object is simply a specialized form of <code>v8::Value</code>.</p>
+<p>Signature:</p>
+<pre><code class="lang-c++">v8::Local&lt;v8::Value&gt; Nan::RangeError(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *msg);
+v8::Local&lt;v8::Value&gt; Nan::RangeError(v8::Local&lt;v8::String&gt; msg);
+</code></pre>
+<p><a name="api_nan_reference_error"></a></p>
+<h3 id="nanreferenceerror">Nan::ReferenceError()</h3>
+<p>Create a new ReferenceError object using the <a href="https://v8docs.nodesource.com/io.js-3.0/da/d6a/classv8_1_1_exception.html" _target="blank">v8::Exception</a> class in a way that is compatible across the supported versions of V8.</p>
+<p>Note that an ReferenceError object is simply a specialized form of <code>v8::Value</code>.</p>
+<p>Signature:</p>
+<pre><code class="lang-c++">v8::Local&lt;v8::Value&gt; Nan::ReferenceError(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *msg);
+v8::Local&lt;v8::Value&gt; Nan::ReferenceError(v8::Local&lt;v8::String&gt; msg);
+</code></pre>
+<p><a name="api_nan_syntax_error"></a></p>
+<h3 id="nansyntaxerror">Nan::SyntaxError()</h3>
+<p>Create a new SyntaxError object using the <a href="https://v8docs.nodesource.com/io.js-3.0/da/d6a/classv8_1_1_exception.html" _target="blank">v8::Exception</a> class in a way that is compatible across the supported versions of V8.</p>
+<p>Note that an SyntaxError object is simply a specialized form of <code>v8::Value</code>.</p>
+<p>Signature:</p>
+<pre><code class="lang-c++">v8::Local&lt;v8::Value&gt; Nan::SyntaxError(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *msg);
+v8::Local&lt;v8::Value&gt; Nan::SyntaxError(v8::Local&lt;v8::String&gt; msg);
+</code></pre>
+<p><a name="api_nan_type_error"></a></p>
+<h3 id="nantypeerror">Nan::TypeError()</h3>
+<p>Create a new TypeError object using the <a href="https://v8docs.nodesource.com/io.js-3.0/da/d6a/classv8_1_1_exception.html" _target="blank">v8::Exception</a> class in a way that is compatible across the supported versions of V8.</p>
+<p>Note that an TypeError object is simply a specialized form of <code>v8::Value</code>.</p>
+<p>Signature:</p>
+<pre><code class="lang-c++">v8::Local&lt;v8::Value&gt; Nan::TypeError(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *msg);
+v8::Local&lt;v8::Value&gt; Nan::TypeError(v8::Local&lt;v8::String&gt; msg);
+</code></pre>
+<p><a name="api_nan_throw_error"></a></p>
+<h3 id="nanthrowerror">Nan::ThrowError()</h3>
+<p>Throw an Error object (a specialized <code>v8::Value</code> as above) in the current context. If a <code>msg</code> is provided, a new Error object will be created.</p>
+<p>Signature:</p>
+<pre><code class="lang-c++"><span class="hljs-keyword">void</span> Nan::ThrowError(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *msg);
+<span class="hljs-keyword">void</span> Nan::ThrowError(v8::Local&lt;v8::String&gt; msg);
+<span class="hljs-keyword">void</span> Nan::ThrowError(v8::Local&lt;v8::Value&gt; error);
+</code></pre>
+<p><a name="api_nan_throw_range_error"></a></p>
+<h3 id="nanthrowrangeerror">Nan::ThrowRangeError()</h3>
+<p>Throw an RangeError object (a specialized <code>v8::Value</code> as above) in the current context. If a <code>msg</code> is provided, a new RangeError object will be created.</p>
+<p>Signature:</p>
+<pre><code class="lang-c++"><span class="hljs-keyword">void</span> Nan::ThrowRangeError(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *msg);
+<span class="hljs-keyword">void</span> Nan::ThrowRangeError(v8::Local&lt;v8::String&gt; msg);
+<span class="hljs-keyword">void</span> Nan::ThrowRangeError(v8::Local&lt;v8::Value&gt; error);
+</code></pre>
+<p><a name="api_nan_throw_reference_error"></a></p>
+<h3 id="nanthrowreferenceerror">Nan::ThrowReferenceError()</h3>
+<p>Throw an ReferenceError object (a specialized <code>v8::Value</code> as above) in the current context. If a <code>msg</code> is provided, a new ReferenceError object will be created.</p>
+<p>Signature:</p>
+<pre><code class="lang-c++"><span class="hljs-keyword">void</span> Nan::ThrowReferenceError(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *msg);
+<span class="hljs-keyword">void</span> Nan::ThrowReferenceError(v8::Local&lt;v8::String&gt; msg);
+<span class="hljs-keyword">void</span> Nan::ThrowReferenceError(v8::Local&lt;v8::Value&gt; error);
+</code></pre>
+<p><a name="api_nan_throw_syntax_error"></a></p>
+<h3 id="nanthrowsyntaxerror">Nan::ThrowSyntaxError()</h3>
+<p>Throw an SyntaxError object (a specialized <code>v8::Value</code> as above) in the current context. If a <code>msg</code> is provided, a new SyntaxError object will be created.</p>
+<p>Signature:</p>
+<pre><code class="lang-c++"><span class="hljs-keyword">void</span> Nan::ThrowSyntaxError(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *msg);
+<span class="hljs-keyword">void</span> Nan::ThrowSyntaxError(v8::Local&lt;v8::String&gt; msg);
+<span class="hljs-keyword">void</span> Nan::ThrowSyntaxError(v8::Local&lt;v8::Value&gt; error);
+</code></pre>
+<p><a name="api_nan_throw_type_error"></a></p>
+<h3 id="nanthrowtypeerror">Nan::ThrowTypeError()</h3>
+<p>Throw an TypeError object (a specialized <code>v8::Value</code> as above) in the current context. If a <code>msg</code> is provided, a new TypeError object will be created.</p>
+<p>Signature:</p>
+<pre><code class="lang-c++"><span class="hljs-keyword">void</span> Nan::ThrowTypeError(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *msg);
+<span class="hljs-keyword">void</span> Nan::ThrowTypeError(v8::Local&lt;v8::String&gt; msg);
+<span class="hljs-keyword">void</span> Nan::ThrowTypeError(v8::Local&lt;v8::Value&gt; error);
+</code></pre>
+<p><a name="api_nan_fatal_exception"></a></p>
+<h3 id="nanfatalexception">Nan::FatalException()</h3>
+<p>Replaces <code>node::FatalException()</code> which has a different API across supported versions of Node. For use with <a href="#api_nan_try_catch"><code>Nan::TryCatch</code></a>.</p>
+<p>Signature:</p>
+<pre><code class="lang-c++"><span class="hljs-keyword">void</span> Nan::FatalException(<span class="hljs-keyword">const</span> Nan::TryCatch&amp; try_catch);
+</code></pre>
+<p><a name="api_nan_errno_exception"></a></p>
+<h3 id="nanerrnoexception">Nan::ErrnoException()</h3>
+<p>Replaces <code>node::ErrnoException()</code> which has a different API across supported versions of Node. </p>
+<p>Signature:</p>
+<pre><code class="lang-c++">v8::Local&lt;v8::Value&gt; Nan::ErrnoException(<span class="hljs-keyword">int</span> errorno,
+                                         <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span>* syscall = <span class="hljs-literal">NULL</span>,
+                                         <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span>* message = <span class="hljs-literal">NULL</span>,
+                                         <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span>* path = <span class="hljs-literal">NULL</span>);
+</code></pre>
+<p><a name="api_nan_try_catch"></a></p>
+<h3 id="nantrycatch">Nan::TryCatch</h3>
+<p>A simple wrapper around <a href="https://v8docs.nodesource.com/io.js-3.0/d4/dc6/classv8_1_1_try_catch.html" _target="blank"><code>v8::TryCatch</code></a> compatible with all supported versions of V8. Can be used as a direct replacement in most cases. See also <a href="#api_nan_fatal_exception"><code>Nan::FatalException()</code></a> for an internal use compatible with <code>node::FatalException</code>.</p>
+<p>Signature:</p>
+<pre><code class="lang-c++"><span class="hljs-keyword">class</span> Nan::TryCatch {
+ <span class="hljs-keyword">public</span>:
+  Nan::TryCatch();
+
+  <span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">HasCaught</span><span class="hljs-params">()</span> <span class="hljs-keyword">const</span></span>;
+
+  <span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">CanContinue</span><span class="hljs-params">()</span> <span class="hljs-keyword">const</span></span>;
+
+  v8::Local&lt;v8::Value&gt; ReThrow();
+
+  v8::Local&lt;v8::Value&gt; Exception() <span class="hljs-keyword">const</span>;
+
+  <span class="hljs-comment">// Nan::MaybeLocal for older versions of V8</span>
+  v8::MaybeLocal&lt;v8::Value&gt; StackTrace() <span class="hljs-keyword">const</span>;
+
+  v8::Local&lt;v8::Message&gt; Message() <span class="hljs-keyword">const</span>;
+
+  <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Reset</span><span class="hljs-params">()</span></span>;
+
+  <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">SetVerbose</span><span class="hljs-params">(<span class="hljs-keyword">bool</span> value)</span></span>;
+
+  <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">SetCaptureMessage</span><span class="hljs-params">(<span class="hljs-keyword">bool</span> value)</span></span>;
+};
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="script.html" class="navigation navigation-prev " aria-label="Previous page: Script">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="buffers.html" class="navigation navigation-next " aria-label="Next page: Buffers">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Errors","level":"1.9","depth":1,"next":{"title":"Buffers","level":"1.10","depth":1,"path":"doc/buffers.md","ref":"doc/buffers.md","articles":[]},"previous":{"title":"Script","level":"1.8","depth":1,"path":"doc/script.md","ref":"doc/script.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/errors.md","mtime":"2016-06-04T08:15:41.000Z","type":"markdown"},"gitbook":{"version":"3.0.3","time":"2016-06-04T08:16:55.353Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/buttons.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,754 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>Maybe Types · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.0.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="script.html" />
+    
+    
+    <link rel="prev" href="converters.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="methods.html">
+            
+                <a href="methods.html">
+            
+                    
+                    JavaScript-accessible methods
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="scopes.html">
+            
+                <a href="scopes.html">
+            
+                    
+                    Scopes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="persistent.html">
+            
+                <a href="persistent.html">
+            
+                    
+                    Persistent references
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="new.html">
+            
+                <a href="new.html">
+            
+                    
+                    New
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="converters.html">
+            
+                <a href="converters.html">
+            
+                    
+                    Converters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7" data-path="maybe_types.html">
+            
+                <a href="maybe_types.html">
+            
+                    
+                    Maybe Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="script.html">
+            
+                <a href="script.html">
+            
+                    
+                    Script
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="errors.html">
+            
+                <a href="errors.html">
+            
+                    
+                    Errors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="buffers.html">
+            
+                <a href="buffers.html">
+            
+                    
+                    Buffers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="callback.html">
+            
+                <a href="callback.html">
+            
+                    
+                    Nan::Callback
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="asyncworker.html">
+            
+                <a href="asyncworker.html">
+            
+                    
+                    Asynchronous work helpers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="string_bytes.html">
+            
+                <a href="string_bytes.html">
+            
+                    
+                    Strings & Bytes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="object_wrappers.html">
+            
+                <a href="object_wrappers.html">
+            
+                    
+                    Object Wrappers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="v8_internals.html">
+            
+                <a href="v8_internals.html">
+            
+                    
+                    V8 internals
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="v8_misc.html">
+            
+                <a href="v8_misc.html">
+            
+                    
+                    Miscellaneous V8 Helpers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="node_misc.html">
+            
+                <a href="node_misc.html">
+            
+                    
+                    Miscellaneous Node Helpers
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Maybe Types</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="maybe-types">Maybe Types</h2>
+<p>The <code>Nan::MaybeLocal</code> and <code>Nan::Maybe</code> types are monads that encapsulate <code>v8::Local</code> handles that <em>may be empty</em>.</p>
+<ul>
+<li><strong>Maybe Types</strong><ul>
+<li><a href="#api_nan_maybe_local"><b><code>Nan::MaybeLocal</code></b></a></li>
+<li><a href="#api_nan_maybe"><b><code>Nan::Maybe</code></b></a></li>
+<li><a href="#api_nan_nothing"><b><code>Nan::Nothing</code></b></a></li>
+<li><a href="#api_nan_just"><b><code>Nan::Just</code></b></a></li>
+</ul>
+</li>
+<li><strong>Maybe Helpers</strong><ul>
+<li><a href="#api_nan_call"><b><code>Nan::Call()</code></b></a></li>
+<li><a href="#api_nan_to_detail_string"><b><code>Nan::ToDetailString()</code></b></a></li>
+<li><a href="#api_nan_to_array_index"><b><code>Nan::ToArrayIndex()</code></b></a></li>
+<li><a href="#api_nan_equals"><b><code>Nan::Equals()</code></b></a></li>
+<li><a href="#api_nan_new_instance"><b><code>Nan::NewInstance()</code></b></a></li>
+<li><a href="#api_nan_get_function"><b><code>Nan::GetFunction()</code></b></a></li>
+<li><a href="#api_nan_set"><b><code>Nan::Set()</code></b></a></li>
+<li><a href="#api_nan_force_set"><b><code>Nan::ForceSet()</code></b></a></li>
+<li><a href="#api_nan_get"><b><code>Nan::Get()</code></b></a></li>
+<li><a href="#api_nan_get_property_attribute"><b><code>Nan::GetPropertyAttributes()</code></b></a></li>
+<li><a href="#api_nan_has"><b><code>Nan::Has()</code></b></a></li>
+<li><a href="#api_nan_delete"><b><code>Nan::Delete()</code></b></a></li>
+<li><a href="#api_nan_get_property_names"><b><code>Nan::GetPropertyNames()</code></b></a></li>
+<li><a href="#api_nan_get_own_property_names"><b><code>Nan::GetOwnPropertyNames()</code></b></a></li>
+<li><a href="#api_nan_set_prototype"><b><code>Nan::SetPrototype()</code></b></a></li>
+<li><a href="#api_nan_object_proto_to_string"><b><code>Nan::ObjectProtoToString()</code></b></a></li>
+<li><a href="#api_nan_has_own_property"><b><code>Nan::HasOwnProperty()</code></b></a></li>
+<li><a href="#api_nan_has_real_named_property"><b><code>Nan::HasRealNamedProperty()</code></b></a></li>
+<li><a href="#api_nan_has_real_indexed_property"><b><code>Nan::HasRealIndexedProperty()</code></b></a></li>
+<li><a href="#api_nan_has_real_named_callback_property"><b><code>Nan::HasRealNamedCallbackProperty()</code></b></a></li>
+<li><a href="#api_nan_get_real_named_property_in_prototype_chain"><b><code>Nan::GetRealNamedPropertyInPrototypeChain()</code></b></a></li>
+<li><a href="#api_nan_get_real_named_property"><b><code>Nan::GetRealNamedProperty()</code></b></a></li>
+<li><a href="#api_nan_call_as_function"><b><code>Nan::CallAsFunction()</code></b></a></li>
+<li><a href="#api_nan_call_as_constructor"><b><code>Nan::CallAsConstructor()</code></b></a></li>
+<li><a href="#api_nan_get_source_line"><b><code>Nan::GetSourceLine()</code></b></a></li>
+<li><a href="#api_nan_get_line_number"><b><code>Nan::GetLineNumber()</code></b></a></li>
+<li><a href="#api_nan_get_start_column"><b><code>Nan::GetStartColumn()</code></b></a></li>
+<li><a href="#api_nan_get_end_column"><b><code>Nan::GetEndColumn()</code></b></a></li>
+<li><a href="#api_nan_clone_element_at"><b><code>Nan::CloneElementAt()</code></b></a></li>
+<li><a href="#api_nan_make_maybe"><b><code>Nan::MakeMaybe()</code></b></a></li>
+</ul>
+</li>
+</ul>
+<p><a name="api_nan_maybe_local"></a></p>
+<h3 id="nanmaybelocal">Nan::MaybeLocal</h3>
+<p>A <code>Nan::MaybeLocal&lt;T&gt;</code> is a wrapper around <a href="https://v8docs.nodesource.com/io.js-3.0/de/deb/classv8_1_1_local.html" _target="blank"><code>v8::Local&lt;T&gt;</code></a> that enforces a check that determines whether the <code>v8::Local&lt;T&gt;</code> is empty before it can be used.</p>
+<p>If an API method returns a <code>Nan::MaybeLocal</code>, the API method can potentially fail either because an exception is thrown, or because an exception is pending, e.g. because a previous API call threw an exception that hasn&apos;t been caught yet, or because a <code>v8::TerminateExecution</code> exception was thrown. In that case, an empty <code>Nan::MaybeLocal</code> is returned.</p>
+<p>Definition:</p>
+<pre><code class="lang-c++"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt; <span class="hljs-keyword">class</span> Nan::MaybeLocal {
+ <span class="hljs-keyword">public</span>:
+  MaybeLocal();
+
+  <span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> S&gt; MaybeLocal(v8::Local&lt;S&gt; that);
+
+  <span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">IsEmpty</span><span class="hljs-params">()</span> <span class="hljs-keyword">const</span></span>;
+
+  <span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> S&gt; <span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">ToLocal</span><span class="hljs-params">(v8::Local&lt;S&gt; *out)</span></span>;
+
+  <span class="hljs-comment">// Will crash if the MaybeLocal&lt;&gt; is empty.</span>
+  v8::Local&lt;T&gt; ToLocalChecked();
+
+  <span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> S&gt; v8::Local&lt;S&gt; FromMaybe(v8::Local&lt;S&gt; default_value) <span class="hljs-keyword">const</span>;
+};
+</code></pre>
+<p>See the documentation for <a href="https://v8docs.nodesource.com/io.js-3.0/d8/d7d/classv8_1_1_maybe_local.html" _target="blank"><code>v8::MaybeLocal</code></a> for further details.</p>
+<p><a name="api_nan_maybe"></a></p>
+<h3 id="nanmaybe">Nan::Maybe</h3>
+<p>A simple <code>Nan::Maybe</code> type, representing an object which may or may not have a value, see <a href="https://hackage.haskell.org/package/base/docs/Data-Maybe.html" _target="blank">https://hackage.haskell.org/package/base/docs/Data-Maybe.html</a>.</p>
+<p>If an API method returns a <code>Nan::Maybe&lt;&gt;</code>, the API method can potentially fail either because an exception is thrown, or because an exception is pending, e.g. because a previous API call threw an exception that hasn&apos;t been caught yet, or because a <code>v8::TerminateExecution</code> exception was thrown. In that case, a &quot;Nothing&quot; value is returned.</p>
+<p>Definition:</p>
+<pre><code class="lang-c++"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt; <span class="hljs-keyword">class</span> Nan::Maybe {
+ <span class="hljs-keyword">public</span>:
+  <span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">IsNothing</span><span class="hljs-params">()</span> <span class="hljs-keyword">const</span></span>;
+  <span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">IsJust</span><span class="hljs-params">()</span> <span class="hljs-keyword">const</span></span>;
+
+  <span class="hljs-comment">// Will crash if the Maybe&lt;&gt; is nothing.</span>
+  <span class="hljs-function">T <span class="hljs-title">FromJust</span><span class="hljs-params">()</span></span>;
+
+  <span class="hljs-function">T <span class="hljs-title">FromMaybe</span><span class="hljs-params">(<span class="hljs-keyword">const</span> T&amp; default_value)</span></span>;
+
+  <span class="hljs-keyword">bool</span> <span class="hljs-keyword">operator</span>==(<span class="hljs-keyword">const</span> Maybe &amp;other);
+
+  <span class="hljs-keyword">bool</span> <span class="hljs-keyword">operator</span>!=(<span class="hljs-keyword">const</span> Maybe &amp;other);
+};
+</code></pre>
+<p>See the documentation for <a href="https://v8docs.nodesource.com/io.js-3.0/d9/d4b/classv8_1_1_maybe.html" _target="blank"><code>v8::Maybe</code></a> for further details.</p>
+<p><a name="api_nan_nothing"></a></p>
+<h3 id="nannothing">Nan::Nothing</h3>
+<p>Construct an empty <code>Nan::Maybe</code> type representing <em>nothing</em>.</p>
+<pre><code class="lang-c++"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt; Nan::Maybe&lt;T&gt; Nan::Nothing();
+</code></pre>
+<p><a name="api_nan_just"></a></p>
+<h3 id="nanjust">Nan::Just</h3>
+<p>Construct a <code>Nan::Maybe</code> type representing <em>just</em> a value.</p>
+<pre><code class="lang-c++"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt; Nan::Maybe&lt;T&gt; Nan::Just(<span class="hljs-keyword">const</span> T &amp;t);
+</code></pre>
+<p><a name="api_nan_call"></a></p>
+<h3 id="nancall">Nan::Call()</h3>
+<p>A helper method for calling <a href="https://v8docs.nodesource.com/io.js-3.0/d5/d54/classv8_1_1_function.html#a468a89f737af0612db10132799c827c0" _target="blank"><code>v8::Function#Call()</code></a> in a way compatible across supported versions of V8.</p>
+<p>Signature:</p>
+<pre><code class="lang-c++">Nan::MaybeLocal&lt;v8::Value&gt; Nan::Call(v8::Local&lt;v8::Function&gt; fun, v8::Local&lt;v8::Object&gt; recv, <span class="hljs-keyword">int</span> argc, v8::Local&lt;v8::Value&gt; argv[]);
+</code></pre>
+<p><a name="api_nan_to_detail_string"></a></p>
+<h3 id="nantodetailstring">Nan::ToDetailString()</h3>
+<p>A helper method for calling <a href="https://v8docs.nodesource.com/io.js-3.0/dc/d0a/classv8_1_1_value.html#a2f9770296dc2c8d274bc8cc0dca243e5" _target="blank"><code>v8::Value#ToDetailString()</code></a> in a way compatible across supported versions of V8.</p>
+<p>Signature:</p>
+<pre><code class="lang-c++">Nan::MaybeLocal&lt;v8::String&gt; Nan::ToDetailString(v8::Local&lt;v8::Value&gt; val);
+</code></pre>
+<p><a name="api_nan_to_array_index"></a></p>
+<h3 id="nantoarrayindex">Nan::ToArrayIndex()</h3>
+<p>A helper method for calling <a href="https://v8docs.nodesource.com/io.js-3.0/dc/d0a/classv8_1_1_value.html#acc5bbef3c805ec458470c0fcd6f13493" _target="blank"><code>v8::Value#ToArrayIndex()</code></a> in a way compatible across supported versions of V8.</p>
+<p>Signature:</p>
+<pre><code class="lang-c++">Nan::MaybeLocal&lt;v8::Uint32&gt; Nan::ToArrayIndex(v8::Local&lt;v8::Value&gt; val);
+</code></pre>
+<p><a name="api_nan_equals"></a></p>
+<h3 id="nanequals">Nan::Equals()</h3>
+<p>A helper method for calling <a href="https://v8docs.nodesource.com/io.js-3.0/dc/d0a/classv8_1_1_value.html#a0d9616ab2de899d4e3047c30a10c9285" _target="blank"><code>v8::Value#Equals()</code></a> in a way compatible across supported versions of V8.</p>
+<p>Signature:</p>
+<pre><code class="lang-c++">Nan::Maybe&lt;<span class="hljs-keyword">bool</span>&gt; Nan::Equals(v8::Local&lt;v8::Value&gt; a, v8::Local&lt;v8::Value&gt;(b));
+</code></pre>
+<p><a name="api_nan_new_instance"></a></p>
+<h3 id="nannewinstance">Nan::NewInstance()</h3>
+<p>A helper method for calling <a href="https://v8docs.nodesource.com/io.js-3.0/d5/d54/classv8_1_1_function.html#a691b13f7a553069732cbacf5ac8c62ec" _target="blank"><code>v8::Function#NewInstance()</code></a> and <a href="https://v8docs.nodesource.com/io.js-3.0/db/d5f/classv8_1_1_object_template.html#ad605a7543cfbc5dab54cdb0883d14ae4" _target="blank"><code>v8::ObjectTemplate#NewInstance()</code></a> in a way compatible across supported versions of V8.</p>
+<p>Signature:</p>
+<pre><code class="lang-c++">Nan::MaybeLocal&lt;v8::Object&gt; Nan::NewInstance(v8::Local&lt;v8::Function&gt; h);
+Nan::MaybeLocal&lt;v8::Object&gt; Nan::NewInstance(v8::Local&lt;v8::Function&gt; h, <span class="hljs-keyword">int</span> argc, v8::Local&lt;v8::Value&gt; argv[]);
+Nan::MaybeLocal&lt;v8::Object&gt; Nan::NewInstance(v8::Local&lt;v8::ObjectTemplate&gt; h);
+</code></pre>
+<p><a name="api_nan_get_function"></a></p>
+<h3 id="nangetfunction">Nan::GetFunction()</h3>
+<p>A helper method for calling <a href="https://v8docs.nodesource.com/io.js-3.0/d8/d83/classv8_1_1_function_template.html#a56d904662a86eca78da37d9bb0ed3705" _target="blank"><code>v8::FunctionTemplate#GetFunction()</code></a> in a way compatible across supported versions of V8.</p>
+<p>Signature:</p>
+<pre><code class="lang-c++">Nan::MaybeLocal&lt;v8::Function&gt; Nan::GetFunction(v8::Local&lt;v8::FunctionTemplate&gt; t);
+</code></pre>
+<p><a name="api_nan_set"></a></p>
+<h3 id="nanset">Nan::Set()</h3>
+<p>A helper method for calling <a href="https://v8docs.nodesource.com/io.js-3.0/db/d85/classv8_1_1_object.html#a67604ea3734f170c66026064ea808f20" _target="blank"><code>v8::Object#Set()</code></a> in a way compatible across supported versions of V8.</p>
+<p>Signature:</p>
+<pre><code class="lang-c++">Nan::Maybe&lt;<span class="hljs-keyword">bool</span>&gt; Nan::Set(v8::Local&lt;v8::Object&gt; obj,
+                          v8::Local&lt;v8::Value&gt; key,
+                          v8::Local&lt;v8::Value&gt; value)
+Nan::Maybe&lt;<span class="hljs-keyword">bool</span>&gt; Nan::Set(v8::Local&lt;v8::Object&gt; obj,
+                          <span class="hljs-keyword">uint32_t</span> index,
+                          v8::Local&lt;v8::Value&gt; value);
+</code></pre>
+<p><a name="api_nan_force_set"></a></p>
+<h3 id="nanforceset">Nan::ForceSet()</h3>
+<p>A helper method for calling <a href="https://v8docs.nodesource.com/io.js-3.0/db/d85/classv8_1_1_object.html#a796b7b682896fb64bf1872747734e836" _target="blank"><code>v8::Object#ForceSet()</code></a> in a way compatible across supported versions of V8.</p>
+<p>Signature:</p>
+<pre><code class="lang-c++">Nan::Maybe&lt;<span class="hljs-keyword">bool</span>&gt; Nan::ForceSet(v8::Local&lt;v8::Object&gt; obj,
+                               v8::Local&lt;v8::Value&gt; key,
+                               v8::Local&lt;v8::Value&gt; value,
+                               v8::PropertyAttribute attribs = v8::None);
+</code></pre>
+<p><a name="api_nan_get"></a></p>
+<h3 id="nanget">Nan::Get()</h3>
+<p>A helper method for calling <a href="https://v8docs.nodesource.com/io.js-3.0/db/d85/classv8_1_1_object.html#a2565f03e736694f6b1e1cf22a0b4eac2" _target="blank"><code>v8::Object#Get()</code></a> in a way compatible across supported versions of V8.</p>
+<p>Signature:</p>
+<pre><code class="lang-c++">Nan::MaybeLocal&lt;v8::Value&gt; Nan::Get(v8::Local&lt;v8::Object&gt; obj,
+                                    v8::Local&lt;v8::Value&gt; key);
+Nan::MaybeLocal&lt;v8::Value&gt; Nan::Get(v8::Local&lt;v8::Object&gt; obj, <span class="hljs-keyword">uint32_t</span> index);
+</code></pre>
+<p><a name="api_nan_get_property_attribute"></a></p>
+<h3 id="nangetpropertyattributes">Nan::GetPropertyAttributes()</h3>
+<p>A helper method for calling <a href="https://v8docs.nodesource.com/io.js-3.0/db/d85/classv8_1_1_object.html#a9b898894da3d1db2714fd9325a54fe57" _target="blank"><code>v8::Object#GetPropertyAttributes()</code></a> in a way compatible across supported versions of V8.</p>
+<p>Signature:</p>
+<pre><code class="lang-c++">Nan::Maybe&lt;v8::PropertyAttribute&gt; Nan::GetPropertyAttributes(
+    v8::Local&lt;v8::Object&gt; obj,
+    v8::Local&lt;v8::Value&gt; key);
+</code></pre>
+<p><a name="api_nan_has"></a></p>
+<h3 id="nanhas">Nan::Has()</h3>
+<p>A helper method for calling <a href="https://v8docs.nodesource.com/io.js-3.0/db/d85/classv8_1_1_object.html#ab3c3d89ea7c2f9afd08965bd7299a41d" _target="blank"><code>v8::Object#Has()</code></a> in a way compatible across supported versions of V8.</p>
+<p>Signature:</p>
+<pre><code class="lang-c++">Nan::Maybe&lt;<span class="hljs-keyword">bool</span>&gt; Nan::Has(v8::Local&lt;v8::Object&gt; obj, v8::Local&lt;v8::String&gt; key);
+Nan::Maybe&lt;<span class="hljs-keyword">bool</span>&gt; Nan::Has(v8::Local&lt;v8::Object&gt; obj, <span class="hljs-keyword">uint32_t</span> index);
+</code></pre>
+<p><a name="api_nan_delete"></a></p>
+<h3 id="nandelete">Nan::Delete()</h3>
+<p>A helper method for calling <a href="https://v8docs.nodesource.com/io.js-3.0/db/d85/classv8_1_1_object.html#a2fa0f5a592582434ed1ceceff7d891ef" _target="blank"><code>v8::Object#Delete()</code></a> in a way compatible across supported versions of V8.</p>
+<p>Signature:</p>
+<pre><code class="lang-c++">Nan::Maybe&lt;<span class="hljs-keyword">bool</span>&gt; Nan::Delete(v8::Local&lt;v8::Object&gt; obj,
+                             v8::Local&lt;v8::String&gt; key);
+Nan::Maybe&lt;<span class="hljs-keyword">bool</span>&gt; Nan::Delete(v8::Local&lt;v8::Object&gt; obj, <span class="hljs-keyword">uint32_t</span> index);
+</code></pre>
+<p><a name="api_nan_get_property_names"></a></p>
+<h3 id="nangetpropertynames">Nan::GetPropertyNames()</h3>
+<p>A helper method for calling <a href="https://v8docs.nodesource.com/io.js-3.0/db/d85/classv8_1_1_object.html#aced885270cfd2c956367b5eedc7fbfe8" _target="blank"><code>v8::Object#GetPropertyNames()</code></a> in a way compatible across supported versions of V8.</p>
+<p>Signature:</p>
+<pre><code class="lang-c++">Nan::MaybeLocal&lt;v8::Array&gt; Nan::GetPropertyNames(v8::Local&lt;v8::Object&gt; obj);
+</code></pre>
+<p><a name="api_nan_get_own_property_names"></a></p>
+<h3 id="nangetownpropertynames">Nan::GetOwnPropertyNames()</h3>
+<p>A helper method for calling <a href="https://v8docs.nodesource.com/io.js-3.0/db/d85/classv8_1_1_object.html#a79a6e4d66049b9aa648ed4dfdb23e6eb" _target="blank"><code>v8::Object#GetOwnPropertyNames()</code></a> in a way compatible across supported versions of V8.</p>
+<p>Signature:</p>
+<pre><code class="lang-c++">Nan::MaybeLocal&lt;v8::Array&gt; Nan::GetOwnPropertyNames(v8::Local&lt;v8::Object&gt; obj);
+</code></pre>
+<p><a name="api_nan_set_prototype"></a></p>
+<h3 id="nansetprototype">Nan::SetPrototype()</h3>
+<p>A helper method for calling <a href="https://v8docs.nodesource.com/io.js-3.0/db/d85/classv8_1_1_object.html#a442706b22fceda6e6d1f632122a9a9f4" _target="blank"><code>v8::Object#SetPrototype()</code></a> in a way compatible across supported versions of V8.</p>
+<p>Signature:</p>
+<pre><code class="lang-c++">Nan::Maybe&lt;<span class="hljs-keyword">bool</span>&gt; Nan::SetPrototype(v8::Local&lt;v8::Object&gt; obj,
+                                   v8::Local&lt;v8::Value&gt; prototype);
+</code></pre>
+<p><a name="api_nan_object_proto_to_string"></a></p>
+<h3 id="nanobjectprototostring">Nan::ObjectProtoToString()</h3>
+<p>A helper method for calling <a href="https://v8docs.nodesource.com/io.js-3.0/db/d85/classv8_1_1_object.html#ab7a92b4dcf822bef72f6c0ac6fea1f0b" _target="blank"><code>v8::Object#ObjectProtoToString()</code></a> in a way compatible across supported versions of V8.</p>
+<p>Signature:</p>
+<pre><code class="lang-c++">Nan::MaybeLocal&lt;v8::String&gt; Nan::ObjectProtoToString(v8::Local&lt;v8::Object&gt; obj);
+</code></pre>
+<p><a name="api_nan_has_own_property"></a></p>
+<h3 id="nanhasownproperty">Nan::HasOwnProperty()</h3>
+<p>A helper method for calling <a href="https://v8docs.nodesource.com/io.js-3.0/db/d85/classv8_1_1_object.html#ab7b7245442ca6de1e1c145ea3fd653ff" _target="blank"><code>v8::Object#HasOwnProperty()</code></a> in a way compatible across supported versions of V8.</p>
+<p>Signature:</p>
+<pre><code class="lang-c++">Nan::Maybe&lt;<span class="hljs-keyword">bool</span>&gt; Nan::HasOwnProperty(v8::Local&lt;v8::Object&gt; obj,
+                                     v8::Local&lt;v8::String&gt; key);
+</code></pre>
+<p><a name="api_nan_has_real_named_property"></a></p>
+<h3 id="nanhasrealnamedproperty">Nan::HasRealNamedProperty()</h3>
+<p>A helper method for calling <a href="https://v8docs.nodesource.com/io.js-3.0/db/d85/classv8_1_1_object.html#ad8b80a59c9eb3c1e6c3cd6c84571f767" _target="blank"><code>v8::Object#HasRealNamedProperty()</code></a> in a way compatible across supported versions of V8.</p>
+<p>Signature:</p>
+<pre><code class="lang-c++">Nan::Maybe&lt;<span class="hljs-keyword">bool</span>&gt; Nan::HasRealNamedProperty(v8::Local&lt;v8::Object&gt; obj,
+                                           v8::Local&lt;v8::String&gt; key);
+</code></pre>
+<p><a name="api_nan_has_real_indexed_property"></a></p>
+<h3 id="nanhasrealindexedproperty">Nan::HasRealIndexedProperty()</h3>
+<p>A helper method for calling <a href="https://v8docs.nodesource.com/io.js-3.0/db/d85/classv8_1_1_object.html#af94fc1135a5e74a2193fb72c3a1b9855" _target="blank"><code>v8::Object#HasRealIndexedProperty()</code></a> in a way compatible across supported versions of V8.</p>
+<p>Signature:</p>
+<pre><code class="lang-c++">Nan::Maybe&lt;<span class="hljs-keyword">bool</span>&gt; Nan::HasRealIndexedProperty(v8::Local&lt;v8::Object&gt; obj,
+                                             <span class="hljs-keyword">uint32_t</span> index);
+</code></pre>
+<p><a name="api_nan_has_real_named_callback_property"></a></p>
+<h3 id="nanhasrealnamedcallbackproperty">Nan::HasRealNamedCallbackProperty()</h3>
+<p>A helper method for calling <a href="https://v8docs.nodesource.com/io.js-3.0/db/d85/classv8_1_1_object.html#af743b7ea132b89f84d34d164d0668811" _target="blank"><code>v8::Object#HasRealNamedCallbackProperty()</code></a> in a way compatible across supported versions of V8.</p>
+<p>Signature:</p>
+<pre><code class="lang-c++">Nan::Maybe&lt;<span class="hljs-keyword">bool</span>&gt; Nan::HasRealNamedCallbackProperty(
+    v8::Local&lt;v8::Object&gt; obj,
+    v8::Local&lt;v8::String&gt; key);
+</code></pre>
+<p><a name="api_nan_get_real_named_property_in_prototype_chain"></a></p>
+<h3 id="nangetrealnamedpropertyinprototypechain">Nan::GetRealNamedPropertyInPrototypeChain()</h3>
+<p>A helper method for calling <a href="https://v8docs.nodesource.com/io.js-3.0/db/d85/classv8_1_1_object.html#a8700b1862e6b4783716964ba4d5e6172" _target="blank"><code>v8::Object#GetRealNamedPropertyInPrototypeChain()</code></a> in a way compatible across supported versions of V8.</p>
+<p>Signature:</p>
+<pre><code class="lang-c++">Nan::MaybeLocal&lt;v8::Value&gt; Nan::GetRealNamedPropertyInPrototypeChain(
+    v8::Local&lt;v8::Object&gt; obj,
+    v8::Local&lt;v8::String&gt; key);
+</code></pre>
+<p><a name="api_nan_get_real_named_property"></a></p>
+<h3 id="nangetrealnamedproperty">Nan::GetRealNamedProperty()</h3>
+<p>A helper method for calling <a href="https://v8docs.nodesource.com/io.js-3.0/db/d85/classv8_1_1_object.html#a84471a824576a5994fdd0ffcbf99ccc0" _target="blank"><code>v8::Object#GetRealNamedProperty()</code></a> in a way compatible across supported versions of V8.</p>
+<p>Signature:</p>
+<pre><code class="lang-c++">Nan::MaybeLocal&lt;v8::Value&gt; Nan::GetRealNamedProperty(v8::Local&lt;v8::Object&gt; obj,
+                                                     v8::Local&lt;v8::String&gt; key);
+</code></pre>
+<p><a name="api_nan_call_as_function"></a></p>
+<h3 id="nancallasfunction">Nan::CallAsFunction()</h3>
+<p>A helper method for calling <a href="https://v8docs.nodesource.com/io.js-3.0/db/d85/classv8_1_1_object.html#a9ef18be634e79b4f0cdffa1667a29f58" _target="blank"><code>v8::Object#CallAsFunction()</code></a> in a way compatible across supported versions of V8.</p>
+<p>Signature:</p>
+<pre><code class="lang-c++">Nan::MaybeLocal&lt;v8::Value&gt; Nan::CallAsFunction(v8::Local&lt;v8::Object&gt; obj,
+                                               v8::Local&lt;v8::Object&gt; recv,
+                                               <span class="hljs-keyword">int</span> argc,
+                                               v8::Local&lt;v8::Value&gt; argv[]);
+</code></pre>
+<p><a name="api_nan_call_as_constructor"></a></p>
+<h3 id="nancallasconstructor">Nan::CallAsConstructor()</h3>
+<p>A helper method for calling <a href="https://v8docs.nodesource.com/io.js-3.0/db/d85/classv8_1_1_object.html#a50d571de50d0b0dfb28795619d07a01b" _target="blank"><code>v8::Object#CallAsConstructor()</code></a> in a way compatible across supported versions of V8.</p>
+<p>Signature:</p>
+<pre><code class="lang-c++">Nan::MaybeLocal&lt;v8::Value&gt; Nan::CallAsConstructor(v8::Local&lt;v8::Object&gt; obj,
+                                                  <span class="hljs-keyword">int</span> argc,
+                                                  v8::Local&lt;v8::Value&gt; argv[]);
+</code></pre>
+<p><a name="api_nan_get_source_line"></a></p>
+<h3 id="nangetsourceline">Nan::GetSourceLine()</h3>
+<p>A helper method for calling <a href="https://v8docs.nodesource.com/io.js-3.0/d9/d28/classv8_1_1_message.html#a849f7a6c41549d83d8159825efccd23a" _target="blank"><code>v8::Message#GetSourceLine()</code></a> in a way compatible across supported versions of V8.</p>
+<p>Signature:</p>
+<pre><code class="lang-c++">Nan::MaybeLocal&lt;v8::String&gt; Nan::GetSourceLine(v8::Local&lt;v8::Message&gt; msg);
+</code></pre>
+<p><a name="api_nan_get_line_number"></a></p>
+<h3 id="nangetlinenumber">Nan::GetLineNumber()</h3>
+<p>A helper method for calling <a href="https://v8docs.nodesource.com/io.js-3.0/d9/d28/classv8_1_1_message.html#adbe46c10a88a6565f2732a2d2adf99b9" _target="blank"><code>v8::Message#GetLineNumber()</code></a> in a way compatible across supported versions of V8.</p>
+<p>Signature:</p>
+<pre><code class="lang-c++">Nan::Maybe&lt;<span class="hljs-keyword">int</span>&gt; Nan::GetLineNumber(v8::Local&lt;v8::Message&gt; msg);
+</code></pre>
+<p><a name="api_nan_get_start_column"></a></p>
+<h3 id="nangetstartcolumn">Nan::GetStartColumn()</h3>
+<p>A helper method for calling <a href="https://v8docs.nodesource.com/io.js-3.0/d9/d28/classv8_1_1_message.html#a60ede616ba3822d712e44c7a74487ba6" _target="blank"><code>v8::Message#GetStartColumn()</code></a> in a way compatible across supported versions of V8.</p>
+<p>Signature:</p>
+<pre><code class="lang-c++">Nan::Maybe&lt;<span class="hljs-keyword">int</span>&gt; Nan::GetStartColumn(v8::Local&lt;v8::Message&gt; msg);
+</code></pre>
+<p><a name="api_nan_get_end_column"></a></p>
+<h3 id="nangetendcolumn">Nan::GetEndColumn()</h3>
+<p>A helper method for calling <a href="https://v8docs.nodesource.com/io.js-3.0/d9/d28/classv8_1_1_message.html#aaa004cf19e529da980bc19fcb76d93be" _target="blank"><code>v8::Message#GetEndColumn()</code></a> in a way compatible across supported versions of V8.</p>
+<p>Signature:</p>
+<pre><code class="lang-c++">Nan::Maybe&lt;<span class="hljs-keyword">int</span>&gt; Nan::GetEndColumn(v8::Local&lt;v8::Message&gt; msg);
+</code></pre>
+<p><a name="api_nan_clone_element_at"></a></p>
+<h3 id="nancloneelementat">Nan::CloneElementAt()</h3>
+<p>A helper method for calling <a href="https://v8docs.nodesource.com/io.js-3.0/d3/d32/classv8_1_1_array.html#a1d3a878d4c1c7cae974dd50a1639245e" _target="blank"><code>v8::Array#CloneElementAt()</code></a> in a way compatible across supported versions of V8.</p>
+<p>Signature:</p>
+<pre><code class="lang-c++">Nan::MaybeLocal&lt;v8::Object&gt; Nan::CloneElementAt(v8::Local&lt;v8::Array&gt; <span class="hljs-built_in">array</span>, <span class="hljs-keyword">uint32_t</span> index);
+</code></pre>
+<p><a name="api_nan_make_maybe"></a></p>
+<h3 id="nanmakemaybe">Nan::MakeMaybe()</h3>
+<p>Wraps a <code>v8::Local&lt;&gt;</code> in a <code>Nan::MaybeLocal&lt;&gt;</code>. When called with a <code>Nan::MaybeLocal&lt;&gt;</code> it just returns its argument. This is useful in generic template code that builds on NAN.</p>
+<p>Synopsis:</p>
+<pre><code class="lang-c++">  MaybeLocal&lt;v8::Number&gt; someNumber = MakeMaybe(New&lt;v8::Number&gt;(<span class="hljs-number">3.141592654</span>));
+  MaybeLocal&lt;v8::String&gt; someString = MakeMaybe(New&lt;v8::String&gt;(<span class="hljs-string">&quot;probably&quot;</span>));
+</code></pre>
+<p>Signature:</p>
+<pre><code class="lang-c++"><span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">typename</span> T, <span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">typename</span>&gt; <span class="hljs-keyword">class</span> MaybeMaybe&gt;
+Nan::MaybeLocal&lt;T&gt; Nan::MakeMaybe(MaybeMaybe&lt;T&gt; v);
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="converters.html" class="navigation navigation-prev " aria-label="Previous page: Converters">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="script.html" class="navigation navigation-next " aria-label="Next page: Script">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Maybe Types","level":"1.7","depth":1,"next":{"title":"Script","level":"1.8","depth":1,"path":"doc/script.md","ref":"doc/script.md","articles":[]},"previous":{"title":"Converters","level":"1.6","depth":1,"path":"doc/converters.md","ref":"doc/converters.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/maybe_types.md","mtime":"2016-06-04T08:15:41.000Z","type":"markdown"},"gitbook":{"version":"3.0.3","time":"2016-06-04T08:16:55.353Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/buttons.js"></script>
+        
+    
+
+    </body>
+</html>
+

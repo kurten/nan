@@ -1,0 +1,472 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>Converters · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.0.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="maybe_types.html" />
+    
+    
+    <link rel="prev" href="new.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="methods.html">
+            
+                <a href="methods.html">
+            
+                    
+                    JavaScript-accessible methods
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="scopes.html">
+            
+                <a href="scopes.html">
+            
+                    
+                    Scopes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="persistent.html">
+            
+                <a href="persistent.html">
+            
+                    
+                    Persistent references
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="new.html">
+            
+                <a href="new.html">
+            
+                    
+                    New
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6" data-path="converters.html">
+            
+                <a href="converters.html">
+            
+                    
+                    Converters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="maybe_types.html">
+            
+                <a href="maybe_types.html">
+            
+                    
+                    Maybe Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="script.html">
+            
+                <a href="script.html">
+            
+                    
+                    Script
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="errors.html">
+            
+                <a href="errors.html">
+            
+                    
+                    Errors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="buffers.html">
+            
+                <a href="buffers.html">
+            
+                    
+                    Buffers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="callback.html">
+            
+                <a href="callback.html">
+            
+                    
+                    Nan::Callback
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="asyncworker.html">
+            
+                <a href="asyncworker.html">
+            
+                    
+                    Asynchronous work helpers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="string_bytes.html">
+            
+                <a href="string_bytes.html">
+            
+                    
+                    Strings & Bytes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="object_wrappers.html">
+            
+                <a href="object_wrappers.html">
+            
+                    
+                    Object Wrappers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="v8_internals.html">
+            
+                <a href="v8_internals.html">
+            
+                    
+                    V8 internals
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="v8_misc.html">
+            
+                <a href="v8_misc.html">
+            
+                    
+                    Miscellaneous V8 Helpers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="node_misc.html">
+            
+                <a href="node_misc.html">
+            
+                    
+                    Miscellaneous Node Helpers
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Converters</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="converters">Converters</h2>
+<p>NAN contains functions that convert <code>v8::Value</code>s to other <code>v8::Value</code> types and native types. Since type conversion is not guaranteed to succeed, they return <code>Nan::Maybe</code> types. These converters can be used in place of <code>value-&gt;ToX()</code> and <code>value-&gt;XValue()</code> (where <code>X</code> is one of the types, e.g. <code>Boolean</code>) in a way that provides a consistent interface across V8 versions. Newer versions of V8 use the new <code>v8::Maybe</code> and <code>v8::MaybeLocal</code> types for these conversions, older versions don&apos;t have this functionality so it is provided by NAN.</p>
+<ul>
+<li><a href="#api_nan_to"><b><code>Nan::To()</code></b></a></li>
+</ul>
+<p><a name="api_nan_to"></a></p>
+<h3 id="nanto">Nan::To()</h3>
+<p>Converts a <code>v8::Local&lt;v8::Value&gt;</code> to a different subtype of <code>v8::Value</code> or to a native data type. Returns a <code>Nan::MaybeLocal&lt;&gt;</code> or a <code>Nan::Maybe&lt;&gt;</code> accordingly.</p>
+<p>See <a href="maybe_types.html">maybe_types.md</a> for more information on <code>Nan::Maybe</code> types.</p>
+<p>Signatures:</p>
+<pre><code class="lang-c++"><span class="hljs-comment">// V8 types</span>
+Nan::MaybeLocal&lt;v8::Boolean&gt; Nan::To&lt;v8::Boolean&gt;(v8::Local&lt;v8::Value&gt; val);
+Nan::MaybeLocal&lt;v8::Int32&gt; Nan::To&lt;v8::Int32&gt;(v8::Local&lt;v8::Value&gt; val);
+Nan::MaybeLocal&lt;v8::Integer&gt; Nan::To&lt;v8::Integer&gt;(v8::Local&lt;v8::Value&gt; val);
+Nan::MaybeLocal&lt;v8::Object&gt; Nan::To&lt;v8::Object&gt;(v8::Local&lt;v8::Value&gt; val);
+Nan::MaybeLocal&lt;v8::Number&gt; Nan::To&lt;v8::Number&gt;(v8::Local&lt;v8::Value&gt; val);
+Nan::MaybeLocal&lt;v8::String&gt; Nan::To&lt;v8::String&gt;(v8::Local&lt;v8::Value&gt; val);
+Nan::MaybeLocal&lt;v8::Uint32&gt; Nan::To&lt;v8::Uint32&gt;(v8::Local&lt;v8::Value&gt; val);
+
+<span class="hljs-comment">// Native types</span>
+Nan::Maybe&lt;<span class="hljs-keyword">bool</span>&gt; Nan::To&lt;<span class="hljs-keyword">bool</span>&gt;(v8::Local&lt;v8::Value&gt; val);
+Nan::Maybe&lt;<span class="hljs-keyword">double</span>&gt; Nan::To&lt;<span class="hljs-keyword">double</span>&gt;(v8::Local&lt;v8::Value&gt; val);
+Nan::Maybe&lt;<span class="hljs-keyword">int32_t</span>&gt; Nan::To&lt;<span class="hljs-keyword">int32_t</span>&gt;(v8::Local&lt;v8::Value&gt; val);
+Nan::Maybe&lt;<span class="hljs-keyword">int64_t</span>&gt; Nan::To&lt;<span class="hljs-keyword">int64_t</span>&gt;(v8::Local&lt;v8::Value&gt; val);
+Nan::Maybe&lt;<span class="hljs-keyword">uint32_t</span>&gt; Nan::To&lt;<span class="hljs-keyword">uint32_t</span>&gt;(v8::Local&lt;v8::Value&gt; val);
+</code></pre>
+<h3 id="example">Example</h3>
+<pre><code class="lang-c++">v8::Local&lt;v8::Value&gt; val;
+Nan::MaybeLocal&lt;v8::String&gt; str = Nan::To&lt;v8::String&gt;(val);
+Nan::Maybe&lt;<span class="hljs-keyword">double</span>&gt; d = Nan::To&lt;<span class="hljs-keyword">double</span>&gt;(val);
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="new.html" class="navigation navigation-prev " aria-label="Previous page: New">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="maybe_types.html" class="navigation navigation-next " aria-label="Next page: Maybe Types">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Converters","level":"1.6","depth":1,"next":{"title":"Maybe Types","level":"1.7","depth":1,"path":"doc/maybe_types.md","ref":"doc/maybe_types.md","articles":[]},"previous":{"title":"New","level":"1.5","depth":1,"path":"doc/new.md","ref":"doc/new.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/converters.md","mtime":"2016-06-04T08:15:41.000Z","type":"markdown"},"gitbook":{"version":"3.0.3","time":"2016-06-04T08:16:55.353Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/buttons.js"></script>
+        
+    
+
+    </body>
+</html>
+

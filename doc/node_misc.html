@@ -1,0 +1,479 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>Miscellaneous Node Helpers · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.0.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="v8_misc.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="methods.html">
+            
+                <a href="methods.html">
+            
+                    
+                    JavaScript-accessible methods
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="scopes.html">
+            
+                <a href="scopes.html">
+            
+                    
+                    Scopes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="persistent.html">
+            
+                <a href="persistent.html">
+            
+                    
+                    Persistent references
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="new.html">
+            
+                <a href="new.html">
+            
+                    
+                    New
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="converters.html">
+            
+                <a href="converters.html">
+            
+                    
+                    Converters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="maybe_types.html">
+            
+                <a href="maybe_types.html">
+            
+                    
+                    Maybe Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="script.html">
+            
+                <a href="script.html">
+            
+                    
+                    Script
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="errors.html">
+            
+                <a href="errors.html">
+            
+                    
+                    Errors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="buffers.html">
+            
+                <a href="buffers.html">
+            
+                    
+                    Buffers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="callback.html">
+            
+                <a href="callback.html">
+            
+                    
+                    Nan::Callback
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="asyncworker.html">
+            
+                <a href="asyncworker.html">
+            
+                    
+                    Asynchronous work helpers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="string_bytes.html">
+            
+                <a href="string_bytes.html">
+            
+                    
+                    Strings & Bytes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="object_wrappers.html">
+            
+                <a href="object_wrappers.html">
+            
+                    
+                    Object Wrappers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="v8_internals.html">
+            
+                <a href="v8_internals.html">
+            
+                    
+                    V8 internals
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="v8_misc.html">
+            
+                <a href="v8_misc.html">
+            
+                    
+                    Miscellaneous V8 Helpers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.17" data-path="node_misc.html">
+            
+                <a href="node_misc.html">
+            
+                    
+                    Miscellaneous Node Helpers
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Miscellaneous Node Helpers</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="miscellaneous-node-helpers">Miscellaneous Node Helpers</h2>
+<ul>
+<li><a href="#api_nan_make_callback"><b><code>Nan::MakeCallback()</code></b></a></li>
+<li><a href="#api_nan_module_init"><b><code>NAN_MODULE_INIT()</code></b></a></li>
+<li><a href="#api_nan_export"><b><code>Nan::Export()</code></b></a></li>
+</ul>
+<p><a name="api_nan_make_callback"></a></p>
+<h3 id="nanmakecallback">Nan::MakeCallback()</h3>
+<p>Wrappers around <code>node::MakeCallback()</code> providing a consistent API across all supported versions of Node.</p>
+<p>Use <code>MakeCallback()</code> rather than using <code>v8::Function#Call()</code> directly in order to properly process internal Node functionality including domains, async hooks, the microtask queue, and other debugging functionality.</p>
+<p>Signatures:</p>
+<pre><code class="lang-c++">v8::Local&lt;v8::Value&gt; Nan::MakeCallback(v8::Local&lt;v8::Object&gt; target,
+                                       v8::Local&lt;v8::Function&gt; func,
+                                       <span class="hljs-keyword">int</span> argc,
+                                       v8::Local&lt;v8::Value&gt;* argv);
+v8::Local&lt;v8::Value&gt; Nan::MakeCallback(v8::Local&lt;v8::Object&gt; target,
+                                       v8::Local&lt;v8::String&gt; symbol,
+                                       <span class="hljs-keyword">int</span> argc,
+                                       v8::Local&lt;v8::Value&gt;* argv);
+v8::Local&lt;v8::Value&gt; Nan::MakeCallback(v8::Local&lt;v8::Object&gt; target,
+                                       <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span>* method,
+                                       <span class="hljs-keyword">int</span> argc,
+                                       v8::Local&lt;v8::Value&gt;* argv);
+</code></pre>
+<p><a name="api_nan_module_init"></a></p>
+<h3 id="nanmoduleinit">NAN_MODULE_INIT()</h3>
+<p>Used to define the entry point function to a Node add-on. Creates a function with a given <code>name</code> that receives a <code>target</code> object representing the equivalent of the JavaScript <code>exports</code> object.</p>
+<p>See example below.</p>
+<p><a name="api_nan_export"></a></p>
+<h3 id="nanexport">Nan::Export()</h3>
+<p>A simple helper to register a <code>v8::FunctionTemplate</code> from a JavaScript-accessible method (see <a href="methods.html">Methods</a>) as a property on an object. Can be used in a way similar to assigning properties to <code>module.exports</code> in JavaScript.</p>
+<p>Signature:</p>
+<pre><code class="lang-c++"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Export</span><span class="hljs-params">(v8::Local&lt;v8::Object&gt; target, <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *name, Nan::FunctionCallback f)</span>
+</span></code></pre>
+<p>Also available as the shortcut <code>NAN_EXPORT</code> macro.</p>
+<p>Example:</p>
+<pre><code class="lang-c++">NAN_METHOD(Foo) {
+  ...
+}
+
+NAN_MODULE_INIT(Init) {
+  NAN_EXPORT(target, Foo);
+}
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="v8_misc.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Miscellaneous V8 Helpers">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Miscellaneous Node Helpers","level":"1.17","depth":1,"previous":{"title":"Miscellaneous V8 Helpers","level":"1.16","depth":1,"path":"doc/v8_misc.md","ref":"doc/v8_misc.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/node_misc.md","mtime":"2016-06-04T08:15:41.000Z","type":"markdown"},"gitbook":{"version":"3.0.3","time":"2016-06-04T08:16:55.353Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/buttons.js"></script>
+        
+    
+
+    </body>
+</html>
+

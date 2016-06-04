@@ -1,0 +1,562 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>V8 internals · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.0.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="v8_misc.html" />
+    
+    
+    <link rel="prev" href="object_wrappers.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="methods.html">
+            
+                <a href="methods.html">
+            
+                    
+                    JavaScript-accessible methods
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="scopes.html">
+            
+                <a href="scopes.html">
+            
+                    
+                    Scopes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="persistent.html">
+            
+                <a href="persistent.html">
+            
+                    
+                    Persistent references
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="new.html">
+            
+                <a href="new.html">
+            
+                    
+                    New
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="converters.html">
+            
+                <a href="converters.html">
+            
+                    
+                    Converters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="maybe_types.html">
+            
+                <a href="maybe_types.html">
+            
+                    
+                    Maybe Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="script.html">
+            
+                <a href="script.html">
+            
+                    
+                    Script
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="errors.html">
+            
+                <a href="errors.html">
+            
+                    
+                    Errors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="buffers.html">
+            
+                <a href="buffers.html">
+            
+                    
+                    Buffers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="callback.html">
+            
+                <a href="callback.html">
+            
+                    
+                    Nan::Callback
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="asyncworker.html">
+            
+                <a href="asyncworker.html">
+            
+                    
+                    Asynchronous work helpers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="string_bytes.html">
+            
+                <a href="string_bytes.html">
+            
+                    
+                    Strings & Bytes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="object_wrappers.html">
+            
+                <a href="object_wrappers.html">
+            
+                    
+                    Object Wrappers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.15" data-path="v8_internals.html">
+            
+                <a href="v8_internals.html">
+            
+                    
+                    V8 internals
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="v8_misc.html">
+            
+                <a href="v8_misc.html">
+            
+                    
+                    Miscellaneous V8 Helpers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="node_misc.html">
+            
+                <a href="node_misc.html">
+            
+                    
+                    Miscellaneous Node Helpers
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >V8 internals</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="v8-internals">V8 internals</h2>
+<p>The hooks to access V8 internals&#x2014;including GC and statistics&#x2014;are different across the supported versions of V8, therefore NAN provides its own hooks that call the appropriate V8 methods.</p>
+<ul>
+<li><a href="#api_nan_gc_callback"><b><code>NAN_GC_CALLBACK()</code></b></a></li>
+<li><a href="#api_nan_add_gc_epilogue_callback"><b><code>Nan::AddGCEpilogueCallback()</code></b></a></li>
+<li><a href="#api_nan_remove_gc_epilogue_callback"><b><code>Nan::RemoveGCEpilogueCallback()</code></b></a></li>
+<li><a href="#api_nan_add_gc_prologue_callback"><b><code>Nan::AddGCPrologueCallback()</code></b></a></li>
+<li><a href="#api_nan_remove_gc_prologue_callback"><b><code>Nan::RemoveGCPrologueCallback()</code></b></a></li>
+<li><a href="#api_nan_get_heap_statistics"><b><code>Nan::GetHeapStatistics()</code></b></a></li>
+<li><a href="#api_nan_set_counter_function"><b><code>Nan::SetCounterFunction()</code></b></a></li>
+<li><a href="#api_nan_set_create_histogram_function"><b><code>Nan::SetCreateHistogramFunction()</code></b></a></li>
+<li><a href="#api_nan_set_add_histogram_sample_function"><b><code>Nan::SetAddHistogramSampleFunction()</code></b></a></li>
+<li><a href="#api_nan_idle_notification"><b><code>Nan::IdleNotification()</code></b></a></li>
+<li><a href="#api_nan_low_memory_notification"><b><code>Nan::LowMemoryNotification()</code></b></a></li>
+<li><a href="#api_nan_context_disposed_notification"><b><code>Nan::ContextDisposedNotification()</code></b></a></li>
+<li><a href="#api_nan_get_internal_field_pointer"><b><code>Nan::GetInternalFieldPointer()</code></b></a></li>
+<li><a href="#api_nan_set_internal_field_pointer"><b><code>Nan::SetInternalFieldPointer()</code></b></a></li>
+<li><a href="#api_nan_adjust_external_memory"><b><code>Nan::AdjustExternalMemory()</code></b></a></li>
+</ul>
+<p><a name="api_nan_gc_callback"></a></p>
+<h3 id="nangccallbackcallbackname">NAN_GC_CALLBACK(callbackname)</h3>
+<p>Use <code>NAN_GC_CALLBACK</code> to declare your callbacks for <code>Nan::AddGCPrologueCallback()</code> and <code>Nan::AddGCEpilogueCallback()</code>. Your new method receives the arguments <code>v8::GCType type</code> and <code>v8::GCCallbackFlags flags</code>.</p>
+<pre><code class="lang-c++"><span class="hljs-keyword">static</span> Nan::Persistent&lt;Function&gt; callback;
+
+NAN_GC_CALLBACK(gcPrologueCallback) {
+  v8::Local&lt;Value&gt; argv[] = { Nan::New(<span class="hljs-string">&quot;prologue&quot;</span>).ToLocalChecked() };
+  Nan::MakeCallback(Nan::GetCurrentContext()-&gt;Global(), Nan::New(callback), <span class="hljs-number">1</span>, argv);
+}
+
+NAN_METHOD(Hook) {
+  callback.Reset(args[<span class="hljs-number">0</span>].As&lt;Function&gt;());
+  Nan::AddGCPrologueCallback(gcPrologueCallback);
+  info.GetReturnValue().Set(info.Holder());
+}
+</code></pre>
+<p><a name="api_nan_add_gc_epilogue_callback"></a></p>
+<h3 id="nanaddgcepiloguecallback">Nan::AddGCEpilogueCallback()</h3>
+<p>Signature:</p>
+<pre><code class="lang-c++"><span class="hljs-keyword">void</span> Nan::AddGCEpilogueCallback(v8::Isolate::GCEpilogueCallback callback, v8::GCType gc_type_filter = v8::kGCTypeAll)
+</code></pre>
+<p>Calls V8&apos;s <a href="https://v8docs.nodesource.com/io.js-3.0/d5/dda/classv8_1_1_isolate.html#a90d1860babc76059c62514b422f56960" _target="blank"><code>AddGCEpilogueCallback()</code></a>.</p>
+<p><a name="api_nan_remove_gc_epilogue_callback"></a></p>
+<h3 id="nanremovegcepiloguecallback">Nan::RemoveGCEpilogueCallback()</h3>
+<p>Signature:</p>
+<pre><code class="lang-c++"><span class="hljs-keyword">void</span> Nan::RemoveGCEpilogueCallback(v8::Isolate::GCEpilogueCallback callback)
+</code></pre>
+<p>Calls V8&apos;s <a href="https://v8docs.nodesource.com/io.js-3.0/d5/dda/classv8_1_1_isolate.html#a05c60859fd4b8e96bfcd451281ed6c7c" _target="blank"><code>RemoveGCEpilogueCallback()</code></a>.</p>
+<p><a name="api_nan_add_gc_prologue_callback"></a></p>
+<h3 id="nanaddgcprologuecallback">Nan::AddGCPrologueCallback()</h3>
+<p>Signature:</p>
+<pre><code class="lang-c++"><span class="hljs-keyword">void</span> Nan::AddGCPrologueCallback(v8::Isolate::GCPrologueCallback, v8::GCType gc_type_filter callback)
+</code></pre>
+<p>Calls V8&apos;s <a href="https://v8docs.nodesource.com/io.js-3.0/d5/dda/classv8_1_1_isolate.html#ab4b87b8f9f8e5bf95eba4009357e001f" _target="blank"><code>AddGCPrologueCallback()</code></a>.</p>
+<p><a name="api_nan_remove_gc_prologue_callback"></a></p>
+<h3 id="nanremovegcprologuecallback">Nan::RemoveGCPrologueCallback()</h3>
+<p>Signature:</p>
+<pre><code class="lang-c++"><span class="hljs-keyword">void</span> Nan::RemoveGCPrologueCallback(v8::Isolate::GCPrologueCallback callback)
+</code></pre>
+<p>Calls V8&apos;s <a href="https://v8docs.nodesource.com/io.js-3.0/d5/dda/classv8_1_1_isolate.html#a9f6c51932811593f81ff30b949124186" _target="blank"><code>RemoveGCEpilogueCallback()</code></a>.</p>
+<p><a name="api_nan_get_heap_statistics"></a></p>
+<h3 id="nangetheapstatistics">Nan::GetHeapStatistics()</h3>
+<p>Signature:</p>
+<pre><code class="lang-c++"><span class="hljs-keyword">void</span> Nan::GetHeapStatistics(v8::HeapStatistics *heap_statistics)
+</code></pre>
+<p>Calls V8&apos;s <a href="https://v8docs.nodesource.com/io.js-3.0/d5/dda/classv8_1_1_isolate.html#a5593ac74687b713095c38987e5950b34" _target="blank"><code>GetHeapStatistics()</code></a>.</p>
+<p><a name="api_nan_set_counter_function"></a></p>
+<h3 id="nansetcounterfunction">Nan::SetCounterFunction()</h3>
+<p>Signature:</p>
+<pre><code class="lang-c++"><span class="hljs-keyword">void</span> Nan::SetCounterFunction(v8::CounterLookupCallback cb)
+</code></pre>
+<p>Calls V8&apos;s <a href="https://v8docs.nodesource.com/io.js-3.0/d5/dda/classv8_1_1_isolate.html#a045d7754e62fa0ec72ae6c259b29af94" _target="blank"><code>SetCounterFunction()</code></a>.</p>
+<p><a name="api_nan_set_create_histogram_function"></a></p>
+<h3 id="nansetcreatehistogramfunction">Nan::SetCreateHistogramFunction()</h3>
+<p>Signature:</p>
+<pre><code class="lang-c++"><span class="hljs-keyword">void</span> Nan::SetCreateHistogramFunction(v8::CreateHistogramCallback cb)
+</code></pre>
+<p>Calls V8&apos;s <a href="https://v8docs.nodesource.com/io.js-3.0/d5/dda/classv8_1_1_isolate.html#a542d67e85089cb3f92aadf032f99e732" _target="blank"><code>SetCreateHistogramFunction()</code></a>.</p>
+<p><a name="api_nan_set_add_histogram_sample_function"></a></p>
+<h3 id="nansetaddhistogramsamplefunction">Nan::SetAddHistogramSampleFunction()</h3>
+<p>Signature:</p>
+<pre><code class="lang-c++"><span class="hljs-keyword">void</span> Nan::SetAddHistogramSampleFunction(v8::AddHistogramSampleCallback cb)
+</code></pre>
+<p>Calls V8&apos;s <a href="https://v8docs.nodesource.com/io.js-3.0/d5/dda/classv8_1_1_isolate.html#aeb420b690bc2c216882d6fdd00ddd3ea" _target="blank"><code>SetAddHistogramSampleFunction()</code></a>.</p>
+<p><a name="api_nan_idle_notification"></a></p>
+<h3 id="nanidlenotification">Nan::IdleNotification()</h3>
+<p>Signature:</p>
+<pre><code class="lang-c++"><span class="hljs-keyword">void</span> Nan::IdleNotification(v8::HeapStatistics *heap_statistics)
+</code></pre>
+<p>Calls V8&apos;s <a href="https://v8docs.nodesource.com/io.js-3.0/d5/dda/classv8_1_1_isolate.html#ad6a2a02657f5425ad460060652a5a118" _target="blank"><code>IdleNotification()</code> or <code>IdleNotificationDeadline()</code></a> depending on V8 version.</p>
+<p><a name="api_nan_low_memory_notification"></a></p>
+<h3 id="nanlowmemorynotification">Nan::LowMemoryNotification()</h3>
+<p>Signature:</p>
+<pre><code class="lang-c++"><span class="hljs-keyword">void</span> Nan::LowMemoryNotification()
+</code></pre>
+<p>Calls V8&apos;s <a href="https://v8docs.nodesource.com/io.js-3.0/d5/dda/classv8_1_1_isolate.html#a24647f61d6b41f69668094bdcd6ea91f" _target="blank"><code>IdleNotification()</code></a>.</p>
+<p><a name="api_nan_context_disposed_notification"></a></p>
+<h3 id="nancontextdisposednotification">Nan::ContextDisposedNotification()</h3>
+<p>Signature:</p>
+<pre><code class="lang-c++"><span class="hljs-keyword">void</span> Nan::ContextDisposedNotification()
+</code></pre>
+<p>Calls V8&apos;s <a href="https://v8docs.nodesource.com/io.js-3.0/d5/dda/classv8_1_1_isolate.html#ad7f5dc559866343fe6cd8db1f134d48b" _target="blank"><code>ContextDisposedNotification()</code></a>.</p>
+<p><a name="api_nan_get_internal_field_pointer"></a></p>
+<h3 id="nangetinternalfieldpointer">Nan::GetInternalFieldPointer()</h3>
+<p>Gets a pointer to the internal field with at <code>index</code> from a V8 <code>Object</code> handle.</p>
+<p>Signature:</p>
+<pre><code class="lang-c++"><span class="hljs-keyword">void</span>* Nan::GetInternalFieldPointer(v8::Local&lt;v8::Object&gt; object, <span class="hljs-keyword">int</span> index)
+</code></pre>
+<p>Calls the Object&apos;s <a href="https://v8docs.nodesource.com/io.js-3.0/db/d85/classv8_1_1_object.html#ab3c57184263cf29963ef0017bec82281" _target="blank"><code>GetAlignedPointerFromInternalField()</code> or <code>GetPointerFromInternalField()</code></a> depending on the version of V8.</p>
+<p><a name="api_nan_set_internal_field_pointer"></a></p>
+<h3 id="nansetinternalfieldpointer">Nan::SetInternalFieldPointer()</h3>
+<p>Sets the value of the internal field at <code>index</code> on a V8 <code>Object</code> handle.</p>
+<p>Signature:</p>
+<pre><code class="lang-c++"><span class="hljs-keyword">void</span> Nan::SetInternalFieldPointer(v8::Local&lt;v8::Object&gt; object, <span class="hljs-keyword">int</span> index, <span class="hljs-keyword">void</span>* value)
+</code></pre>
+<p>Calls the Object&apos;s <a href="https://v8docs.nodesource.com/io.js-3.0/d5/dda/classv8_1_1_isolate.html#ad7f5dc559866343fe6cd8db1f134d48b" _target="blank"><code>SetAlignedPointerInInternalField()</code> or <code>SetPointerInInternalField()</code></a> depending on the version of V8.</p>
+<p><a name="api_nan_adjust_external_memory"></a></p>
+<h3 id="nanadjustexternalmemory">Nan::AdjustExternalMemory()</h3>
+<p>Signature:</p>
+<pre><code class="lang-c++"><span class="hljs-keyword">int</span> Nan::AdjustExternalMemory(<span class="hljs-keyword">int</span> bytesChange)
+</code></pre>
+<p>Calls V8&apos;s <a href="https://v8docs.nodesource.com/io.js-3.0/d5/dda/classv8_1_1_isolate.html#ae1a59cac60409d3922582c4af675473e" _target="blank"><code>AdjustAmountOfExternalAllocatedMemory()</code></a>.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="object_wrappers.html" class="navigation navigation-prev " aria-label="Previous page: Object Wrappers">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="v8_misc.html" class="navigation navigation-next " aria-label="Next page: Miscellaneous V8 Helpers">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"V8 internals","level":"1.15","depth":1,"next":{"title":"Miscellaneous V8 Helpers","level":"1.16","depth":1,"path":"doc/v8_misc.md","ref":"doc/v8_misc.md","articles":[]},"previous":{"title":"Object Wrappers","level":"1.14","depth":1,"path":"doc/object_wrappers.md","ref":"doc/object_wrappers.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/v8_internals.md","mtime":"2016-06-04T08:15:41.000Z","type":"markdown"},"gitbook":{"version":"3.0.3","time":"2016-06-04T08:16:55.353Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/buttons.js"></script>
+        
+    
+
+    </body>
+</html>
+

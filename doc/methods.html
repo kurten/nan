@@ -1,0 +1,891 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>JavaScript-accessible methods · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.0.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="scopes.html" />
+    
+    
+    <link rel="prev" href="../" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2" data-path="methods.html">
+            
+                <a href="methods.html">
+            
+                    
+                    JavaScript-accessible methods
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="scopes.html">
+            
+                <a href="scopes.html">
+            
+                    
+                    Scopes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="persistent.html">
+            
+                <a href="persistent.html">
+            
+                    
+                    Persistent references
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="new.html">
+            
+                <a href="new.html">
+            
+                    
+                    New
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="converters.html">
+            
+                <a href="converters.html">
+            
+                    
+                    Converters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="maybe_types.html">
+            
+                <a href="maybe_types.html">
+            
+                    
+                    Maybe Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="script.html">
+            
+                <a href="script.html">
+            
+                    
+                    Script
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="errors.html">
+            
+                <a href="errors.html">
+            
+                    
+                    Errors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="buffers.html">
+            
+                <a href="buffers.html">
+            
+                    
+                    Buffers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="callback.html">
+            
+                <a href="callback.html">
+            
+                    
+                    Nan::Callback
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="asyncworker.html">
+            
+                <a href="asyncworker.html">
+            
+                    
+                    Asynchronous work helpers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="string_bytes.html">
+            
+                <a href="string_bytes.html">
+            
+                    
+                    Strings & Bytes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="object_wrappers.html">
+            
+                <a href="object_wrappers.html">
+            
+                    
+                    Object Wrappers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="v8_internals.html">
+            
+                <a href="v8_internals.html">
+            
+                    
+                    V8 internals
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="v8_misc.html">
+            
+                <a href="v8_misc.html">
+            
+                    
+                    Miscellaneous V8 Helpers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="node_misc.html">
+            
+                <a href="node_misc.html">
+            
+                    
+                    Miscellaneous Node Helpers
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >JavaScript-accessible methods</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="javascript-accessible-methods">JavaScript-accessible methods</h2>
+<p>A <em>template</em> is a blueprint for JavaScript functions and objects in a context. You can use a template to wrap C++ functions and data structures within JavaScript objects so that they can be manipulated from JavaScript. See the V8 Embedders Guide section on <a href="https://developers.google.com/v8/embed#templates" _target="blank">Templates</a> for further information.</p>
+<p>In order to expose functionality to JavaScript via a template, you must provide it to V8 in a form that it understands. Across the versions of V8 supported by NAN, JavaScript-accessible method signatures vary widely, NAN fully abstracts method declaration and provides you with an interface that is similar to the most recent V8 API but is backward-compatible with older versions that still use the now-deceased <code>v8::Argument</code> type.</p>
+<ul>
+<li><strong>Method argument types</strong><ul>
+<li><a href="#api_nan_function_callback_info"><b><code>Nan::FunctionCallbackInfo</code></b></a></li>
+<li><a href="#api_nan_property_callback_info"><b><code>Nan::PropertyCallbackInfo</code></b></a></li>
+<li><a href="#api_nan_return_value"><b><code>Nan::ReturnValue</code></b></a></li>
+</ul>
+</li>
+<li><strong>Method declarations</strong><ul>
+<li><a href="#api_nan_method"><b>Method declaration</b></a></li>
+<li><a href="#api_nan_getter"><b>Getter declaration</b></a></li>
+<li><a href="#api_nan_setter"><b>Setter declaration</b></a></li>
+<li><a href="#api_nan_property_getter"><b>Property getter declaration</b></a></li>
+<li><a href="#api_nan_property_setter"><b>Property setter declaration</b></a></li>
+<li><a href="#api_nan_property_enumerator"><b>Property enumerator declaration</b></a></li>
+<li><a href="#api_nan_property_deleter"><b>Property deleter declaration</b></a></li>
+<li><a href="#api_nan_property_query"><b>Property query declaration</b></a></li>
+<li><a href="#api_nan_index_getter"><b>Index getter declaration</b></a></li>
+<li><a href="#api_nan_index_setter"><b>Index setter declaration</b></a></li>
+<li><a href="#api_nan_index_enumerator"><b>Index enumerator declaration</b></a></li>
+<li><a href="#api_nan_index_deleter"><b>Index deleter declaration</b></a></li>
+<li><a href="#api_nan_index_query"><b>Index query declaration</b></a></li>
+</ul>
+</li>
+<li>Method and template helpers<ul>
+<li><a href="#api_nan_set_method"><b><code>Nan::SetMethod()</code></b></a></li>
+<li><a href="#api_nan_set_prototype_method"><b><code>Nan::SetPrototypeMethod()</code></b></a></li>
+<li><a href="#api_nan_set_accessor"><b><code>Nan::SetAccessor()</code></b></a></li>
+<li><a href="#api_nan_set_named_property_handler"><b><code>Nan::SetNamedPropertyHandler()</code></b></a></li>
+<li><a href="#api_nan_set_indexed_property_handler"><b><code>Nan::SetIndexedPropertyHandler()</code></b></a></li>
+<li><a href="#api_nan_set_template"><b><code>Nan::SetTemplate()</code></b></a></li>
+<li><a href="#api_nan_set_prototype_template"><b><code>Nan::SetPrototypeTemplate()</code></b></a></li>
+<li><a href="#api_nan_set_instance_template"><b><code>Nan::SetInstanceTemplate()</code></b></a></li>
+<li><a href="#api_nan_set_call_handler"><b><code>Nan::SetCallHandler()</code></b></a></li>
+<li><a href="#api_nan_set_call_as_function_handler"><b><code>Nan::SetCallAsFunctionHandler()</code></b></a></li>
+</ul>
+</li>
+</ul>
+<p><a name="api_nan_function_callback_info"></a></p>
+<h3 id="nanfunctioncallbackinfo">Nan::FunctionCallbackInfo</h3>
+<p><code>Nan::FunctionCallbackInfo</code> should be used in place of <a href="https://v8docs.nodesource.com/io.js-3.0/dd/d0d/classv8_1_1_function_callback_info.html" _target="blank"><code>v8::FunctionCallbackInfo</code></a>, even with older versions of Node where <code>v8::FunctionCallbackInfo</code> does not exist.</p>
+<p>Definition:</p>
+<pre><code class="lang-c++"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt; <span class="hljs-keyword">class</span> FunctionCallbackInfo {
+ <span class="hljs-keyword">public</span>:
+  ReturnValue&lt;T&gt; GetReturnValue() <span class="hljs-keyword">const</span>;
+  v8::Local&lt;v8::Function&gt; Callee();
+  v8::Local&lt;v8::Value&gt; Data();
+  v8::Local&lt;v8::Object&gt; Holder();
+  <span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">IsConstructCall</span><span class="hljs-params">()</span></span>;
+  <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">Length</span><span class="hljs-params">()</span> <span class="hljs-keyword">const</span></span>;
+  v8::Local&lt;v8::Value&gt; <span class="hljs-keyword">operator</span>[](<span class="hljs-keyword">int</span> i) <span class="hljs-keyword">const</span>;
+  v8::Local&lt;v8::Object&gt; This() <span class="hljs-keyword">const</span>;
+  v8::<span class="hljs-function">Isolate *<span class="hljs-title">GetIsolate</span><span class="hljs-params">()</span> <span class="hljs-keyword">const</span></span>;
+};
+</code></pre>
+<p>See the <a href="https://v8docs.nodesource.com/io.js-3.0/dd/d0d/classv8_1_1_function_callback_info.html" _target="blank"><code>v8::FunctionCallbackInfo</code></a> documentation for usage details on these. See <a href="#api_nan_return_value"><code>Nan::ReturnValue</code></a> for further information on how to set a return value from methods.</p>
+<p><a name="api_nan_property_callback_info"></a></p>
+<h3 id="nanpropertycallbackinfo">Nan::PropertyCallbackInfo</h3>
+<p><code>Nan::PropertyCallbackInfo</code> should be used in place of <a href="https://v8docs.nodesource.com/io.js-3.0/d7/dc5/classv8_1_1_property_callback_info.html" _target="blank"><code>v8::PropertyCallbackInfo</code></a>, even with older versions of Node where <code>v8::PropertyCallbackInfo</code> does not exist.</p>
+<p>Definition:</p>
+<pre><code class="lang-c++"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt; <span class="hljs-keyword">class</span> PropertyCallbackInfo : <span class="hljs-keyword">public</span> PropertyCallbackInfoBase&lt;T&gt; {
+ <span class="hljs-keyword">public</span>:
+  ReturnValue&lt;T&gt; GetReturnValue() <span class="hljs-keyword">const</span>;
+  v8::<span class="hljs-function">Isolate* <span class="hljs-title">GetIsolate</span><span class="hljs-params">()</span> <span class="hljs-keyword">const</span></span>;
+  v8::Local&lt;v8::Value&gt; Data() <span class="hljs-keyword">const</span>;
+  v8::Local&lt;v8::Object&gt; This() <span class="hljs-keyword">const</span>;
+  v8::Local&lt;v8::Object&gt; Holder() <span class="hljs-keyword">const</span>;
+};
+</code></pre>
+<p>See the <a href="https://v8docs.nodesource.com/io.js-3.0/d7/dc5/classv8_1_1_property_callback_info.html" _target="blank"><code>v8::PropertyCallbackInfo</code></a> documentation for usage details on these. See <a href="#api_nan_return_value"><code>Nan::ReturnValue</code></a> for further information on how to set a return value from property accessor methods.</p>
+<p><a name="api_nan_return_value"></a></p>
+<h3 id="nanreturnvalue">Nan::ReturnValue</h3>
+<p><code>Nan::ReturnValue</code> is used in place of <a href="https://v8docs.nodesource.com/io.js-3.0/da/da7/classv8_1_1_return_value.html" _target="blank"><code>v8::ReturnValue</code></a> on both <a href="#api_nan_function_callback_info"><code>Nan::FunctionCallbackInfo</code></a> and <a href="#api_nan_property_callback_info"><code>Nan::PropertyCallbackInfo</code></a> as the return type of <code>GetReturnValue()</code>.</p>
+<p>Example usage:</p>
+<pre><code class="lang-c++"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">EmptyArray</span><span class="hljs-params">(<span class="hljs-keyword">const</span> Nan::FunctionCallbackInfo&lt;v8::Value&gt;&amp; info)</span> </span>{
+  info.GetReturnValue().Set(Nan::New&lt;v8::Array&gt;());
+}
+</code></pre>
+<p>Definition:</p>
+<pre><code class="lang-c++"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt; <span class="hljs-keyword">class</span> ReturnValue {
+ <span class="hljs-keyword">public</span>:
+  <span class="hljs-comment">// Handle setters</span>
+  <span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">typename</span> S&gt; <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Set</span><span class="hljs-params">(<span class="hljs-keyword">const</span> v8::Local&lt;S&gt; &amp;handle)</span></span>;
+  <span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">typename</span> S&gt; <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Set</span><span class="hljs-params">(<span class="hljs-keyword">const</span> Nan::Global&lt;S&gt; &amp;handle)</span></span>;
+
+  <span class="hljs-comment">// Fast primitive setters</span>
+  <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Set</span><span class="hljs-params">(<span class="hljs-keyword">bool</span> value)</span></span>;
+  <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Set</span><span class="hljs-params">(<span class="hljs-keyword">double</span> i)</span></span>;
+  <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Set</span><span class="hljs-params">(int32_t i)</span></span>;
+  <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Set</span><span class="hljs-params">(uint32_t i)</span></span>;
+
+  <span class="hljs-comment">// Fast JS primitive setters</span>
+  <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">SetNull</span><span class="hljs-params">()</span></span>;
+  <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">SetUndefined</span><span class="hljs-params">()</span></span>;
+  <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">SetEmptyString</span><span class="hljs-params">()</span></span>;
+
+  <span class="hljs-comment">// Convenience getter for isolate</span>
+  v8::<span class="hljs-function">Isolate *<span class="hljs-title">GetIsolate</span><span class="hljs-params">()</span> <span class="hljs-keyword">const</span></span>;
+};
+</code></pre>
+<p>See the documentation on <a href="https://v8docs.nodesource.com/io.js-3.0/da/da7/classv8_1_1_return_value.html" _target="blank"><code>v8::ReturnValue</code></a> for further information on this.</p>
+<p><a name="api_nan_method"></a></p>
+<h3 id="method-declaration">Method declaration</h3>
+<p>JavaScript-accessible methods should be declared with the following signature to form a <code>Nan::FunctionCallback</code>:</p>
+<pre><code class="lang-c++"><span class="hljs-function"><span class="hljs-keyword">typedef</span> <span class="hljs-title">void</span><span class="hljs-params">(*FunctionCallback)</span><span class="hljs-params">(<span class="hljs-keyword">const</span> FunctionCallbackInfo&lt;v8::Value&gt;&amp;)</span></span>;
+</code></pre>
+<p>Example:</p>
+<pre><code class="lang-c++"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">MethodName</span><span class="hljs-params">(<span class="hljs-keyword">const</span> Nan::FunctionCallbackInfo&lt;v8::Value&gt;&amp; info)</span> </span>{
+  ...
+}
+</code></pre>
+<p>You do not need to declare a new <code>HandleScope</code> within a method as one is implicitly created for you.</p>
+<p><strong>Example usage</strong></p>
+<pre><code class="lang-c++"><span class="hljs-comment">// .h:</span>
+<span class="hljs-keyword">class</span> Foo : <span class="hljs-keyword">public</span> Nan::ObjectWrap {
+  ...
+
+  <span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Bar</span><span class="hljs-params">(<span class="hljs-keyword">const</span> Nan::FunctionCallbackInfo&lt;v8::Value&gt;&amp; info)</span></span>;
+  <span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Baz</span><span class="hljs-params">(<span class="hljs-keyword">const</span> Nan::FunctionCallbackInfo&lt;v8::Value&gt;&amp; info)</span></span>;
+}
+
+
+<span class="hljs-comment">// .cc:</span>
+<span class="hljs-keyword">void</span> Foo::Bar(<span class="hljs-keyword">const</span> Nan::FunctionCallbackInfo&lt;v8::Value&gt;&amp; info) {
+  ...
+}
+
+<span class="hljs-keyword">void</span> Foo::Baz(<span class="hljs-keyword">const</span> Nan::FunctionCallbackInfo&lt;v8::Value&gt;&amp; info) {
+  ...
+}
+</code></pre>
+<p>A helper macro <code>NAN_METHOD(methodname)</code> exists, compatible with NAN v1 method declarations.</p>
+<p><strong>Example usage with <code>NAN_METHOD(methodname)</code></strong></p>
+<pre><code class="lang-c++"><span class="hljs-comment">// .h:</span>
+<span class="hljs-keyword">class</span> Foo : <span class="hljs-keyword">public</span> Nan::ObjectWrap {
+  ...
+
+  <span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-title">NAN_METHOD</span><span class="hljs-params">(Bar)</span></span>;
+  <span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-title">NAN_METHOD</span><span class="hljs-params">(Baz)</span></span>;
+}
+
+
+<span class="hljs-comment">// .cc:</span>
+NAN_METHOD(Foo::Bar) {
+  ...
+}
+
+NAN_METHOD(Foo::Baz) {
+  ...
+}
+</code></pre>
+<p>Use <a href="#api_nan_set_prototype_method"><code>Nan::SetPrototypeMethod</code></a> to attach a method to a JavaScript function prototype or <a href="#api_nan_set_method"><code>Nan::SetMethod</code></a> to attach a method directly on a JavaScript object.</p>
+<p><a name="api_nan_getter"></a></p>
+<h3 id="getter-declaration">Getter declaration</h3>
+<p>JavaScript-accessible getters should be declared with the following signature to form a <code>Nan::GetterCallback</code>:</p>
+<pre><code class="lang-c++"><span class="hljs-function"><span class="hljs-keyword">typedef</span> <span class="hljs-title">void</span><span class="hljs-params">(*GetterCallback)</span><span class="hljs-params">(v8::Local&lt;v8::String&gt;,
+                              <span class="hljs-keyword">const</span> PropertyCallbackInfo&lt;v8::Value&gt;&amp;)</span></span>;
+</code></pre>
+<p>Example:</p>
+<pre><code class="lang-c++"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">GetterName</span><span class="hljs-params">(v8::Local&lt;v8::String&gt; property,
+                <span class="hljs-keyword">const</span> Nan::PropertyCallbackInfo&lt;v8::Value&gt;&amp; info)</span> </span>{
+  ...
+}
+</code></pre>
+<p>You do not need to declare a new <code>HandleScope</code> within a getter as one is implicitly created for you.</p>
+<p>A helper macro <code>NAN_GETTER(methodname)</code> exists, compatible with NAN v1 method declarations.</p>
+<p>Also see the V8 Embedders Guide documentation on <a href="https://developers.google.com/v8/embed#accesssors" _target="blank">Accessors</a>.</p>
+<p><a name="api_nan_setter"></a></p>
+<h3 id="setter-declaration">Setter declaration</h3>
+<p>JavaScript-accessible setters should be declared with the following signature to form a <b><code>Nan::SetterCallback</code></b>:</p>
+<pre><code class="lang-c++"><span class="hljs-function"><span class="hljs-keyword">typedef</span> <span class="hljs-title">void</span><span class="hljs-params">(*SetterCallback)</span><span class="hljs-params">(v8::Local&lt;v8::String&gt;,
+                              v8::Local&lt;v8::Value&gt;,
+                              <span class="hljs-keyword">const</span> PropertyCallbackInfo&lt;<span class="hljs-keyword">void</span>&gt;&amp;)</span></span>;
+</code></pre>
+<p>Example:</p>
+<pre><code class="lang-c++"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">SetterName</span><span class="hljs-params">(v8::Local&lt;v8::String&gt; property,
+                v8::Local&lt;v8::Value&gt; value,
+                <span class="hljs-keyword">const</span> Nan::PropertyCallbackInfo&lt;<span class="hljs-keyword">void</span>&gt;&amp; info)</span> </span>{
+  ...
+}
+</code></pre>
+<p>You do not need to declare a new <code>HandleScope</code> within a setter as one is implicitly created for you.</p>
+<p>A helper macro <code>NAN_SETTER(methodname)</code> exists, compatible with NAN v1 method declarations.</p>
+<p>Also see the V8 Embedders Guide documentation on <a href="https://developers.google.com/v8/embed#accesssors" _target="blank">Accessors</a>.</p>
+<p><a name="api_nan_property_getter"></a></p>
+<h3 id="property-getter-declaration">Property getter declaration</h3>
+<p>JavaScript-accessible property getters should be declared with the following signature to form a <b><code>Nan::PropertyGetterCallback</code></b>:</p>
+<pre><code class="lang-c++"><span class="hljs-function"><span class="hljs-keyword">typedef</span> <span class="hljs-title">void</span><span class="hljs-params">(*PropertyGetterCallback)</span><span class="hljs-params">(v8::Local&lt;v8::String&gt;,
+                                      <span class="hljs-keyword">const</span> PropertyCallbackInfo&lt;v8::Value&gt;&amp;)</span></span>;
+</code></pre>
+<p>Example:</p>
+<pre><code class="lang-c++"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">PropertyGetterName</span><span class="hljs-params">(v8::Local&lt;v8::String&gt; property,
+                        <span class="hljs-keyword">const</span> Nan::PropertyCallbackInfo&lt;v8::Value&gt;&amp; info)</span> </span>{
+  ...
+}
+</code></pre>
+<p>You do not need to declare a new <code>HandleScope</code> within a property getter as one is implicitly created for you.</p>
+<p>A helper macro <code>NAN_PROPERTY_GETTER(methodname)</code> exists, compatible with NAN v1 method declarations.</p>
+<p>Also see the V8 Embedders Guide documentation on named property <a href="https://developers.google.com/v8/embed#interceptors" _target="blank">Interceptors</a>.</p>
+<p><a name="api_nan_property_setter"></a></p>
+<h3 id="property-setter-declaration">Property setter declaration</h3>
+<p>JavaScript-accessible property setters should be declared with the following signature to form a <b><code>Nan::PropertySetterCallback</code></b>:</p>
+<pre><code class="lang-c++"><span class="hljs-function"><span class="hljs-keyword">typedef</span> <span class="hljs-title">void</span><span class="hljs-params">(*PropertySetterCallback)</span><span class="hljs-params">(v8::Local&lt;v8::String&gt;,
+                                      v8::Local&lt;v8::Value&gt;,
+                                      <span class="hljs-keyword">const</span> PropertyCallbackInfo&lt;v8::Value&gt;&amp;)</span></span>;
+</code></pre>
+<p>Example:</p>
+<pre><code class="lang-c++"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">PropertySetterName</span><span class="hljs-params">(v8::Local&lt;v8::String&gt; property,
+                        v8::Local&lt;v8::Value&gt; value,
+                        <span class="hljs-keyword">const</span> Nan::PropertyCallbackInfo&lt;v8::Value&gt;&amp; info)</span></span>;
+</code></pre>
+<p>You do not need to declare a new <code>HandleScope</code> within a property setter as one is implicitly created for you.</p>
+<p>A helper macro <code>NAN_PROPERTY_SETTER(methodname)</code> exists, compatible with NAN v1 method declarations.</p>
+<p>Also see the V8 Embedders Guide documentation on named property <a href="https://developers.google.com/v8/embed#interceptors" _target="blank">Interceptors</a>.</p>
+<p><a name="api_nan_property_enumerator"></a></p>
+<h3 id="property-enumerator-declaration">Property enumerator declaration</h3>
+<p>JavaScript-accessible property enumerators should be declared with the following signature to form a <b><code>Nan::PropertyEnumeratorCallback</code></b>:</p>
+<pre><code class="lang-c++"><span class="hljs-function"><span class="hljs-keyword">typedef</span> <span class="hljs-title">void</span><span class="hljs-params">(*PropertyEnumeratorCallback)</span><span class="hljs-params">(<span class="hljs-keyword">const</span> PropertyCallbackInfo&lt;v8::Array&gt;&amp;)</span></span>;
+</code></pre>
+<p>Example:</p>
+<pre><code class="lang-c++"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">PropertyEnumeratorName</span><span class="hljs-params">(<span class="hljs-keyword">const</span> Nan::PropertyCallbackInfo&lt;v8::Array&gt;&amp; info)</span></span>;
+</code></pre>
+<p>You do not need to declare a new <code>HandleScope</code> within a property enumerator as one is implicitly created for you.</p>
+<p>A helper macro <code>NAN_PROPERTY_ENUMERATOR(methodname)</code> exists, compatible with NAN v1 method declarations.</p>
+<p>Also see the V8 Embedders Guide documentation on named property <a href="https://developers.google.com/v8/embed#interceptors" _target="blank">Interceptors</a>.</p>
+<p><a name="api_nan_property_deleter"></a></p>
+<h3 id="property-deleter-declaration">Property deleter declaration</h3>
+<p>JavaScript-accessible property deleters should be declared with the following signature to form a <b><code>Nan::PropertyDeleterCallback</code></b>:</p>
+<pre><code class="lang-c++"><span class="hljs-function"><span class="hljs-keyword">typedef</span> <span class="hljs-title">void</span><span class="hljs-params">(*PropertyDeleterCallback)</span><span class="hljs-params">(v8::Local&lt;v8::String&gt;,
+                                       <span class="hljs-keyword">const</span> PropertyCallbackInfo&lt;v8::Boolean&gt;&amp;)</span></span>;
+</code></pre>
+<p>Example:</p>
+<pre><code class="lang-c++"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">PropertyDeleterName</span><span class="hljs-params">(v8::Local&lt;v8::String&gt; property,
+                         <span class="hljs-keyword">const</span> Nan::PropertyCallbackInfo&lt;v8::Boolean&gt;&amp; info)</span></span>;
+</code></pre>
+<p>You do not need to declare a new <code>HandleScope</code> within a property deleter as one is implicitly created for you.</p>
+<p>A helper macro <code>NAN_PROPERTY_DELETER(methodname)</code> exists, compatible with NAN v1 method declarations.</p>
+<p>Also see the V8 Embedders Guide documentation on named property <a href="https://developers.google.com/v8/embed#interceptors" _target="blank">Interceptors</a>.</p>
+<p><a name="api_nan_property_query"></a></p>
+<h3 id="property-query-declaration">Property query declaration</h3>
+<p>JavaScript-accessible property query methods should be declared with the following signature to form a <b><code>Nan::PropertyQueryCallback</code></b>:</p>
+<pre><code class="lang-c++"><span class="hljs-function"><span class="hljs-keyword">typedef</span> <span class="hljs-title">void</span><span class="hljs-params">(*PropertyQueryCallback)</span><span class="hljs-params">(v8::Local&lt;v8::String&gt;,
+                                     <span class="hljs-keyword">const</span> PropertyCallbackInfo&lt;v8::Integer&gt;&amp;)</span></span>;
+</code></pre>
+<p>Example:</p>
+<pre><code class="lang-c++"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">PropertyQueryName</span><span class="hljs-params">(v8::Local&lt;v8::String&gt; property,
+                       <span class="hljs-keyword">const</span> Nan::PropertyCallbackInfo&lt;v8::Integer&gt;&amp; info)</span></span>;
+</code></pre>
+<p>You do not need to declare a new <code>HandleScope</code> within a property query method as one is implicitly created for you.</p>
+<p>A helper macro <code>NAN_PROPERTY_QUERY(methodname)</code> exists, compatible with NAN v1 method declarations.</p>
+<p>Also see the V8 Embedders Guide documentation on named property <a href="https://developers.google.com/v8/embed#interceptors" _target="blank">Interceptors</a>.</p>
+<p><a name="api_nan_index_getter"></a></p>
+<h3 id="index-getter-declaration">Index getter declaration</h3>
+<p>JavaScript-accessible index getter methods should be declared with the following signature to form a <b><code>Nan::IndexGetterCallback</code></b>:</p>
+<pre><code class="lang-c++"><span class="hljs-function"><span class="hljs-keyword">typedef</span> <span class="hljs-title">void</span><span class="hljs-params">(*IndexGetterCallback)</span><span class="hljs-params">(uint32_t,
+                                   <span class="hljs-keyword">const</span> PropertyCallbackInfo&lt;v8::Value&gt;&amp;)</span></span>;
+</code></pre>
+<p>Example:</p>
+<pre><code class="lang-c++"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">IndexGetterName</span><span class="hljs-params">(uint32_t index, <span class="hljs-keyword">const</span> PropertyCallbackInfo&lt;v8::Value&gt;&amp; info)</span></span>;
+</code></pre>
+<p>You do not need to declare a new <code>HandleScope</code> within a index getter as one is implicitly created for you.</p>
+<p>A helper macro <code>NAN_INDEX_GETTER(methodname)</code> exists, compatible with NAN v1 method declarations.</p>
+<p>Also see the V8 Embedders Guide documentation on indexed property <a href="https://developers.google.com/v8/embed#interceptors" _target="blank">Interceptors</a>.</p>
+<p><a name="api_nan_index_setter"></a></p>
+<h3 id="index-setter-declaration">Index setter declaration</h3>
+<p>JavaScript-accessible index setter methods should be declared with the following signature to form a <b><code>Nan::IndexSetterCallback</code></b>:</p>
+<pre><code class="lang-c++"><span class="hljs-function"><span class="hljs-keyword">typedef</span> <span class="hljs-title">void</span><span class="hljs-params">(*IndexSetterCallback)</span><span class="hljs-params">(uint32_t,
+                                   v8::Local&lt;v8::Value&gt;,
+                                   <span class="hljs-keyword">const</span> PropertyCallbackInfo&lt;v8::Value&gt;&amp;)</span></span>;
+</code></pre>
+<p>Example:</p>
+<pre><code class="lang-c++"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">IndexSetterName</span><span class="hljs-params">(uint32_t index,
+                     v8::Local&lt;v8::Value&gt; value,
+                     <span class="hljs-keyword">const</span> PropertyCallbackInfo&lt;v8::Value&gt;&amp; info)</span></span>;
+</code></pre>
+<p>You do not need to declare a new <code>HandleScope</code> within a index setter as one is implicitly created for you.</p>
+<p>A helper macro <code>NAN_INDEX_SETTER(methodname)</code> exists, compatible with NAN v1 method declarations.</p>
+<p>Also see the V8 Embedders Guide documentation on indexed property <a href="https://developers.google.com/v8/embed#interceptors" _target="blank">Interceptors</a>.</p>
+<p><a name="api_nan_index_enumerator"></a></p>
+<h3 id="index-enumerator-declaration">Index enumerator declaration</h3>
+<p>JavaScript-accessible index enumerator methods should be declared with the following signature to form a <b><code>Nan::IndexEnumeratorCallback</code></b>:</p>
+<pre><code class="lang-c++"><span class="hljs-function"><span class="hljs-keyword">typedef</span> <span class="hljs-title">void</span><span class="hljs-params">(*IndexEnumeratorCallback)</span><span class="hljs-params">(<span class="hljs-keyword">const</span> PropertyCallbackInfo&lt;v8::Array&gt;&amp;)</span></span>;
+</code></pre>
+<p>Example:</p>
+<pre><code class="lang-c++"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">IndexEnumeratorName</span><span class="hljs-params">(<span class="hljs-keyword">const</span> PropertyCallbackInfo&lt;v8::Array&gt;&amp; info)</span></span>;
+</code></pre>
+<p>You do not need to declare a new <code>HandleScope</code> within a index enumerator as one is implicitly created for you.</p>
+<p>A helper macro <code>NAN_INDEX_ENUMERATOR(methodname)</code> exists, compatible with NAN v1 method declarations.</p>
+<p>Also see the V8 Embedders Guide documentation on indexed property <a href="https://developers.google.com/v8/embed#interceptors" _target="blank">Interceptors</a>.</p>
+<p><a name="api_nan_index_deleter"></a></p>
+<h3 id="index-deleter-declaration">Index deleter declaration</h3>
+<p>JavaScript-accessible index deleter methods should be declared with the following signature to form a <b><code>Nan::IndexDeleterCallback</code></b>:</p>
+<pre><code class="lang-c++"><span class="hljs-function"><span class="hljs-keyword">typedef</span> <span class="hljs-title">void</span><span class="hljs-params">(*IndexDeleterCallback)</span><span class="hljs-params">(uint32_t,
+                                    <span class="hljs-keyword">const</span> PropertyCallbackInfo&lt;v8::Boolean&gt;&amp;)</span></span>;
+</code></pre>
+<p>Example:</p>
+<pre><code class="lang-c++"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">IndexDeleterName</span><span class="hljs-params">(uint32_t index, <span class="hljs-keyword">const</span> PropertyCallbackInfo&lt;v8::Boolean&gt;&amp; info)</span></span>;
+</code></pre>
+<p>You do not need to declare a new <code>HandleScope</code> within a index deleter as one is implicitly created for you.</p>
+<p>A helper macro <code>NAN_INDEX_DELETER(methodname)</code> exists, compatible with NAN v1 method declarations.</p>
+<p>Also see the V8 Embedders Guide documentation on indexed property <a href="https://developers.google.com/v8/embed#interceptors" _target="blank">Interceptors</a>.</p>
+<p><a name="api_nan_index_query"></a></p>
+<h3 id="index-query-declaration">Index query declaration</h3>
+<p>JavaScript-accessible index query methods should be declared with the following signature to form a <b><code>Nan::IndexQueryCallback</code></b>:</p>
+<pre><code class="lang-c++"><span class="hljs-function"><span class="hljs-keyword">typedef</span> <span class="hljs-title">void</span><span class="hljs-params">(*IndexQueryCallback)</span><span class="hljs-params">(uint32_t,
+                                  <span class="hljs-keyword">const</span> PropertyCallbackInfo&lt;v8::Integer&gt;&amp;)</span></span>;
+</code></pre>
+<p>Example:</p>
+<pre><code class="lang-c++"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">IndexQueryName</span><span class="hljs-params">(uint32_t index, <span class="hljs-keyword">const</span> PropertyCallbackInfo&lt;v8::Integer&gt;&amp; info)</span></span>;
+</code></pre>
+<p>You do not need to declare a new <code>HandleScope</code> within a index query method as one is implicitly created for you.</p>
+<p>A helper macro <code>NAN_INDEX_QUERY(methodname)</code> exists, compatible with NAN v1 method declarations.</p>
+<p>Also see the V8 Embedders Guide documentation on indexed property <a href="https://developers.google.com/v8/embed#interceptors" _target="blank">Interceptors</a>.</p>
+<p><a name="api_nan_set_method"></a></p>
+<h3 id="nansetmethod">Nan::SetMethod()</h3>
+<p>Sets a method with a given name directly on a JavaScript object where the method has the <code>Nan::FunctionCallback</code> signature (see <a href="#api_nan_method">Method declaration</a>).</p>
+<p>Signature:</p>
+<pre><code class="lang-c++"><span class="hljs-keyword">void</span> Nan::SetMethod(v8::Local&lt;v8::Object&gt; recv,
+                    <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *name,
+                    Nan::FunctionCallback callback)
+<span class="hljs-keyword">void</span> Nan::SetMethod(v8::Local&lt;v8::Template&gt; templ,
+                    <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *name,
+                    Nan::FunctionCallback callback)
+</code></pre>
+<p><a name="api_nan_set_prototype_method"></a></p>
+<h3 id="nansetprototypemethod">Nan::SetPrototypeMethod()</h3>
+<p>Sets a method with a given name on a <code>FunctionTemplate</code>&apos;s prototype where the method has the <code>Nan::FunctionCallback</code> signature (see <a href="#api_nan_method">Method declaration</a>).</p>
+<p>Signature:</p>
+<pre><code class="lang-c++"><span class="hljs-keyword">void</span> Nan::SetPrototypeMethod(v8::Local&lt;v8::FunctionTemplate&gt; recv,
+                             <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span>* name,
+                             Nan::FunctionCallback callback)
+</code></pre>
+<p><a name="api_nan_set_accessor"></a></p>
+<h3 id="nansetaccessor">Nan::SetAccessor()</h3>
+<p>Sets getters and setters for a property with a given name on an <code>ObjectTemplate</code> or a plain <code>Object</code>. Accepts getters with the <code>Nan::GetterCallback</code> signature (see <a href="#api_nan_getter">Getter declaration</a>) and setters with the <code>Nan::SetterCallback</code> signature (see <a href="#api_nan_setter">Setter declaration</a>).</p>
+<p>Signature:</p>
+<pre><code class="lang-c++">void SetAccessor(v8::Local&lt;v8::ObjectTemplate&gt; tpl,
+                 v8::Local&lt;v8::String&gt; name,
+                 Nan::GetterCallback getter,
+                 Nan::SetterCallback setter = 0,
+                 v8::Local&lt;v8::Value&gt; data = v8::Local&lt;v8::Value&gt;(),
+                 v8::AccessControl settings = v8::DEFAULT,
+                 v8::PropertyAttribute attribute = v8::None,
+                 imp::Sig signature = imp::Sig());
+bool SetAccessor(v8::Local&lt;v8::Object&gt; obj,
+                 v8::Local&lt;v8::String&gt; name,
+                 Nan::GetterCallback getter,
+                 Nan::SetterCallback setter = 0,
+                 v8::Local&lt;v8::Value&gt; data = v8::Local&lt;v8::Value&gt;(),
+                 v8::AccessControl settings = v8::DEFAULT,
+                 v8::PropertyAttribute attribute = v8::None)
+</code></pre>
+<p>See the V8 <a href="https://v8docs.nodesource.com/io.js-3.0/db/d5f/classv8_1_1_object_template.html#aa90691622f01269c6a11391d372ca0c5" _target="blank"><code>ObjectTemplate#SetAccessor()</code></a> and <a href="https://v8docs.nodesource.com/io.js-3.0/db/d85/classv8_1_1_object.html#a3f9dee085f5ec346465f1dc924325043" _target="blank"><code>Object#SetAccessor()</code></a> for further information about how to use <code>Nan::SetAccessor()</code>.</p>
+<p><a name="api_nan_set_named_property_handler"></a></p>
+<h3 id="nansetnamedpropertyhandler">Nan::SetNamedPropertyHandler()</h3>
+<p>Sets named property getters, setters, query, deleter and enumerator methods on an <code>ObjectTemplate</code>. Accepts:</p>
+<ul>
+<li>Property getters with the <code>Nan::PropertyGetterCallback</code> signature (see <a href="#api_nan_property_getter">Property getter declaration</a>)</li>
+<li>Property setters with the <code>Nan::PropertySetterCallback</code> signature (see <a href="#api_nan_property_setter">Property setter declaration</a>)</li>
+<li>Property query methods with the <code>Nan::PropertyQueryCallback</code> signature (see <a href="#api_nan_property_query">Property query declaration</a>)</li>
+<li>Property deleters with the <code>Nan::PropertyDeleterCallback</code> signature (see <a href="#api_nan_property_deleter">Property deleter declaration</a>)</li>
+<li>Property enumerators with the <code>Nan::PropertyEnumeratorCallback</code> signature (see <a href="#api_nan_property_enumerator">Property enumerator declaration</a>)</li>
+</ul>
+<p>Signature:</p>
+<pre><code class="lang-c++">void SetNamedPropertyHandler(v8::Local&lt;v8::ObjectTemplate&gt; tpl,
+                             Nan::PropertyGetterCallback getter,
+                             Nan::PropertySetterCallback setter = 0,
+                             Nan::PropertyQueryCallback query = 0,
+                             Nan::PropertyDeleterCallback deleter = 0,
+                             Nan::PropertyEnumeratorCallback enumerator = 0,
+                             v8::Local&lt;v8::Value&gt; data = v8::Local&lt;v8::Value&gt;())
+</code></pre>
+<p>See the V8 <a href="https://v8docs.nodesource.com/io.js-3.0/db/d5f/classv8_1_1_object_template.html#a34d1cc45b642cd131706663801aadd76" _target="blank"><code>ObjectTemplate#SetNamedPropertyHandler()</code></a> for further information about how to use <code>Nan::SetNamedPropertyHandler()</code>.</p>
+<p><a name="api_nan_set_indexed_property_handler"></a></p>
+<h3 id="nansetindexedpropertyhandler">Nan::SetIndexedPropertyHandler()</h3>
+<p>Sets indexed property getters, setters, query, deleter and enumerator methods on an <code>ObjectTemplate</code>. Accepts:</p>
+<ul>
+<li>Indexed property getters with the <code>Nan::IndexGetterCallback</code> signature (see <a href="#api_nan_index_getter">Index getter declaration</a>)</li>
+<li>Indexed property setters with the <code>Nan::IndexSetterCallback</code> signature (see <a href="#api_nan_index_setter">Index setter declaration</a>)</li>
+<li>Indexed property query methods with the <code>Nan::IndexQueryCallback</code> signature (see <a href="#api_nan_index_query">Index query declaration</a>)</li>
+<li>Indexed property deleters with the <code>Nan::IndexDeleterCallback</code> signature (see <a href="#api_nan_index_deleter">Index deleter declaration</a>)</li>
+<li>Indexed property enumerators with the <code>Nan::IndexEnumeratorCallback</code> signature (see <a href="#api_nan_index_enumerator">Index enumerator declaration</a>)</li>
+</ul>
+<p>Signature:</p>
+<pre><code class="lang-c++">void SetIndexedPropertyHandler(v8::Local&lt;v8::ObjectTemplate&gt; tpl,
+                               Nan::IndexGetterCallback getter,
+                               Nan::IndexSetterCallback setter = 0,
+                               Nan::IndexQueryCallback query = 0,
+                               Nan::IndexDeleterCallback deleter = 0,
+                               Nan::IndexEnumeratorCallback enumerator = 0,
+                               v8::Local&lt;v8::Value&gt; data = v8::Local&lt;v8::Value&gt;())
+</code></pre>
+<p>See the V8 <a href="https://v8docs.nodesource.com/io.js-3.0/db/d5f/classv8_1_1_object_template.html#ac0234cbede45d51778bb5f6a32a9e125" _target="blank"><code>ObjectTemplate#SetIndexedPropertyHandler()</code></a> for further information about how to use <code>Nan::SetIndexedPropertyHandler()</code>.</p>
+<p><a name="api_nan_set_template"></a></p>
+<h3 id="nansettemplate">Nan::SetTemplate()</h3>
+<p>Adds properties on an <code>Object</code>&apos;s or <code>Function</code>&apos;s template.</p>
+<p>Signature:</p>
+<pre><code class="lang-c++"><span class="hljs-keyword">void</span> Nan::SetTemplate(v8::Local&lt;v8::Template&gt; templ,
+                      <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *name,
+                      v8::Local&lt;v8::Data&gt; value);
+<span class="hljs-keyword">void</span> Nan::SetTemplate(v8::Local&lt;v8::Template&gt; templ,
+                      v8::Local&lt;v8::String&gt; name,
+                      v8::Local&lt;v8::Data&gt; value,
+                      v8::PropertyAttribute attributes)
+</code></pre>
+<p>Calls the <code>Template</code>&apos;s <a href="https://v8docs.nodesource.com/io.js-3.0/db/df7/classv8_1_1_template.html#a2db6a56597bf23c59659c0659e564ddf" _target="blank"><code>Set()</code></a>.</p>
+<p><a name="api_nan_set_prototype_template"></a></p>
+<h3 id="nansetprototypetemplate">Nan::SetPrototypeTemplate()</h3>
+<p>Adds properties on an <code>Object</code>&apos;s or <code>Function</code>&apos;s prototype template.</p>
+<p>Signature:</p>
+<pre><code class="lang-c++"><span class="hljs-keyword">void</span> Nan::SetPrototypeTemplate(v8::Local&lt;v8::FunctionTemplate&gt; templ,
+                               <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *name,
+                               v8::Local&lt;v8::Data&gt; value);
+<span class="hljs-keyword">void</span> Nan::SetPrototypeTemplate(v8::Local&lt;v8::FunctionTemplate&gt; templ,
+                               v8::Local&lt;v8::String&gt; name,
+                               v8::Local&lt;v8::Data&gt; value,
+                               v8::PropertyAttribute attributes)
+</code></pre>
+<p>Calls the <code>FunctionTemplate</code>&apos;s <em>PrototypeTemplate&apos;s</em> <a href="https://v8docs.nodesource.com/io.js-3.0/db/df7/classv8_1_1_template.html#a2db6a56597bf23c59659c0659e564ddf" _target="blank"><code>Set()</code></a>.</p>
+<p><a name="api_nan_set_instance_template"></a></p>
+<h3 id="nansetinstancetemplate">Nan::SetInstanceTemplate()</h3>
+<p>Use to add instance properties on <code>FunctionTemplate</code>&apos;s.</p>
+<p>Signature:</p>
+<pre><code class="lang-c++"><span class="hljs-keyword">void</span> Nan::SetInstanceTemplate(v8::Local&lt;v8::FunctionTemplate&gt; templ,
+                              <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *name,
+                              v8::Local&lt;v8::Data&gt; value);
+<span class="hljs-keyword">void</span> Nan::SetInstanceTemplate(v8::Local&lt;v8::FunctionTemplate&gt; templ,
+                              v8::Local&lt;v8::String&gt; name,
+                              v8::Local&lt;v8::Data&gt; value,
+                              v8::PropertyAttribute attributes)
+</code></pre>
+<p>Calls the <code>FunctionTemplate</code>&apos;s <em>InstanceTemplate&apos;s</em> <a href="https://v8docs.nodesource.com/io.js-3.0/db/df7/classv8_1_1_template.html#a2db6a56597bf23c59659c0659e564ddf" _target="blank"><code>Set()</code></a>.</p>
+<p><a name="api_nan_set_call_handler"></a></p>
+<h3 id="nansetcallhandler">Nan::SetCallHandler()</h3>
+<p>Set the call-handler callback for a <code>v8::FunctionTemplate</code>.
+This callback is called whenever the function created from this FunctionTemplate is called.</p>
+<p>Signature:</p>
+<pre><code class="lang-c++"><span class="hljs-keyword">void</span> Nan::SetCallHandler(v8::Local&lt;v8::FunctionTemplate&gt; templ, Nan::FunctionCallback callback, v8::Local&lt;v8::Value&gt; data = v8::Local&lt;v8::Value&gt;())
+</code></pre>
+<p>Calls the <code>FunctionTemplate</code>&apos;s <a href="https://v8docs.nodesource.com/io.js-3.0/d8/d83/classv8_1_1_function_template.html#a26cf14e36aa1a47091b98536d08ea821" _target="blank"><code>SetCallHandler()</code></a>.</p>
+<p><a name="api_nan_set_call_as_function_handler"></a></p>
+<h3 id="nansetcallasfunctionhandler">Nan::SetCallAsFunctionHandler()</h3>
+<p>Sets the callback to be used when calling instances created from the <code>v8::ObjectTemplate</code> as a function.
+If no callback is set, instances behave like normal JavaScript objects that cannot be called as a function.</p>
+<p>Signature:</p>
+<pre><code class="lang-c++"><span class="hljs-keyword">void</span> Nan::SetCallAsFunctionHandler(v8::Local&lt;v8::ObjectTemplate&gt; templ, Nan::FunctionCallback callback, v8::Local&lt;v8::Value&gt; data = v8::Local&lt;v8::Value&gt;())
+</code></pre>
+<p>Calls the <code>ObjectTemplate</code>&apos;s <a href="https://v8docs.nodesource.com/io.js-3.0/db/d5f/classv8_1_1_object_template.html#ae0a0e72fb0c5e5f32e255fe5bcc7316a" _target="blank"><code>SetCallAsFunctionHandler()</code></a>.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../" class="navigation navigation-prev " aria-label="Previous page: Introduction">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="scopes.html" class="navigation navigation-next " aria-label="Next page: Scopes">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"JavaScript-accessible methods","level":"1.2","depth":1,"next":{"title":"Scopes","level":"1.3","depth":1,"path":"doc/scopes.md","ref":"doc/scopes.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/methods.md","mtime":"2016-06-04T08:15:41.000Z","type":"markdown"},"gitbook":{"version":"3.0.3","time":"2016-06-04T08:16:55.353Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/buttons.js"></script>
+        
+    
+
+    </body>
+</html>
+
